@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.38.72](https://github.com/jeysonj2/open-wc-create/compare/v0.38.71...v0.38.72) (2023-02-22)
+
 ### [0.38.71](https://github.com/jeysonj2/open-wc-create/compare/v0.38.70...v0.38.71) (2023-02-22)
 
 ### [0.38.70](https://github.com/jeysonj2/open-wc-create/compare/v0.39.0...v0.38.70) (2023-02-22)
