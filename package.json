@@ -1,6 +1,6 @@
 {
-  "name": "@open-wc/create",
-  "version": "0.38.69",
+  "name": "@izwc/create",
+  "version": "0.39.0",
   "publishConfig": {
     "access": "public"
   },
@@ -8,13 +8,13 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/open-wc/create.git"
+    "url": "https://github.com/jeysonj2/open-wc-create.git"
   },
   "bugs": {
-    "url": "https://github.com/open-wc/create/issues"
+    "url": "https://github.com/jeysonj2/open-wc-create/issues"
   },
-  "author": "open-wc",
-  "homepage": "https://github.com/open-wc/create",
+  "author": "open-wc & izwc",
+  "homepage": "https://github.com/jeysonj2/open-wc-create/create",
   "bin": {
     "create-open-wc": "./dist/create.js"
   },
@@ -36,6 +36,7 @@
   ],
   "keywords": [
     "open-wc",
+    "izwc",
     "owc",
     "generator",
     "starter-app"

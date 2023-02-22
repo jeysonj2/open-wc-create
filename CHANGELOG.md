@@ -2,6 +2,61 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 0.39.0 (2023-02-22)
+
+
+### ⚠ BREAKING CHANGES
+
+* require node >= 14
+
+### Features
+
+* --help command ([c6b35f4](https://github.com/jeysonj2/open-wc-create/commit/c6b35f4462059e2c09d5ae651e60a8cf7628e79a))
+* add cem analyzer ([a630f99](https://github.com/jeysonj2/open-wc-create/commit/a630f9920ef688889758899845bb4d9ed58f93cf)), closes [#48](https://github.com/jeysonj2/open-wc-create/issues/48)
+* add EJS as template engine and force all label to be filled ([6f42933](https://github.com/jeysonj2/open-wc-create/commit/6f42933c289103e4498e2a249785a353510b78c4))
+* add scriptRunCommand to all templates ([56fb92c](https://github.com/jeysonj2/open-wc-create/commit/56fb92cbf1117626741766412d2697a324ab08fe))
+* Adds vscode extension recommendations ([5606924](https://github.com/jeysonj2/open-wc-create/commit/5606924ccc4ab81e116f5ca0ce8d6446a560353f))
+* allow passing custom EJS options ([dcf386a](https://github.com/jeysonj2/open-wc-create/commit/dcf386a1fe7415cd0de870f0957ece694158f7ce))
+* **ejs include:** add config filename to allow caching and include functionnality ([e9d155d](https://github.com/jeysonj2/open-wc-create/commit/e9d155df7e2f31246ae670a59a3cf16adc6f50a2))
+* generate manifest after installing ([1c82db3](https://github.com/jeysonj2/open-wc-create/commit/1c82db3856cc10ea8e8f5a6ba4048263da6bfcce))
+* require node >= 14 ([24ca118](https://github.com/jeysonj2/open-wc-create/commit/24ca118feeff0c55836917b838990423dae0f74f))
+* ts nodenext, add type module, add exports for vanilla wc ([f061e20](https://github.com/jeysonj2/open-wc-create/commit/f061e2058501a2e4dc5c8719ea68e69ee71a65cf))
+* update eslint config ([fd7329d](https://github.com/jeysonj2/open-wc-create/commit/fd7329d48690ce51dde3d296c93aad002c0a281e))
+* update to lit v2 ([#36](https://github.com/jeysonj2/open-wc-create/issues/36)) ([fc090cd](https://github.com/jeysonj2/open-wc-create/commit/fc090cd4d1803eadd94e44d8abab4a852dbe840f))
+* updates ([7dfac63](https://github.com/jeysonj2/open-wc-create/commit/7dfac63ea7fa5e035213f5f2c2469130ad96e797))
+* use WDS storybook and other improvements ([f1cff22](https://github.com/jeysonj2/open-wc-create/commit/f1cff22a90e516dce9c1b300c49b4061360a01da))
+
+
+### Bug Fixes
+
+* analyze command ([7c57405](https://github.com/jeysonj2/open-wc-create/commit/7c5740579b3c0547ca13467ee873ab5a283f1cd2))
+* appindex, ts eslint versions ([280c9bb](https://github.com/jeysonj2/open-wc-create/commit/280c9bb13e35172a5ea01f45e51e762acdc48798))
+* correctly order storybook plugins ([4251470](https://github.com/jeysonj2/open-wc-create/commit/4251470e172d9780621039e6b2c883d2f3ea0aca))
+* **deps:** update all dependencies ([d4d719e](https://github.com/jeysonj2/open-wc-create/commit/d4d719e82f50119f21ed9a62cff3c233b87d9752))
+* **deps:** update dependency chalk to ^4.1.1 ([fcfa945](https://github.com/jeysonj2/open-wc-create/commit/fcfa9454b69c245e5e338fa5fa2525c476db25cf))
+* **deps:** update dependency chalk to ^4.1.2 ([015d10d](https://github.com/jeysonj2/open-wc-create/commit/015d10d4cc36cb09198b51eab6249fe8e0156655))
+* **deps:** update dependency command-line-args to ^5.1.3 ([58fb764](https://github.com/jeysonj2/open-wc-create/commit/58fb764ae1961b7b6ff91677cf8a4f8da4acd9dc))
+* **deps:** update dependency command-line-args to ^5.2.0 ([7eb00ae](https://github.com/jeysonj2/open-wc-create/commit/7eb00ae0ee622e6c1951860d9d047dfea161f9ba))
+* **deps:** update dependency ejs to ^3.1.6 ([4691125](https://github.com/jeysonj2/open-wc-create/commit/46911258b015b41b199d757b78c176dbf8e76c77))
+* **deps:** update dependency glob to ^7.1.7 ([5604c6f](https://github.com/jeysonj2/open-wc-create/commit/5604c6f4aaa0a65979ee8faf336813b6ef5fcfaf))
+* **deps:** update dependency glob to ^7.2.0 ([5c94302](https://github.com/jeysonj2/open-wc-create/commit/5c94302fcdbff15e221adccb75cb26f18c2e090b))
+* **deps:** update dependency lit to ^2.0.0 ([ef98a3c](https://github.com/jeysonj2/open-wc-create/commit/ef98a3c341412937561bc6fb001c134fdc66b32f))
+* **deps:** update dependency lit to ^2.0.0-rc.3 ([f613048](https://github.com/jeysonj2/open-wc-create/commit/f613048518bf5b87a4ed286f62fa19735c639975))
+* **deps:** update dependency lit to ^2.0.0-rc.4 ([82707f8](https://github.com/jeysonj2/open-wc-create/commit/82707f82bcbf0e4aa6f10d86c642be0d80825de7))
+* **deps:** update dependency lit to ^2.0.2 ([4e836eb](https://github.com/jeysonj2/open-wc-create/commit/4e836eb417a4d5cd6a307d88aadddd4d4b335fa0))
+* **deps:** update dependency lit-element to ^2.5.0 ([fd9cf9a](https://github.com/jeysonj2/open-wc-create/commit/fd9cf9ad4d4e6fd71d35d5b67fc16b0765bc34ba))
+* **deps:** update dependency lit-element to ^2.5.1 ([9900ab9](https://github.com/jeysonj2/open-wc-create/commit/9900ab93e8574b7f6b03c17931312f3e99c636fd))
+* **deps:** update dependency lit-html to ^1.4.0 ([0c9a279](https://github.com/jeysonj2/open-wc-create/commit/0c9a279a0a0c53048a260dddbcebeccd40b35904))
+* **deps:** update dependency lit-html to ^1.4.1 ([bde8e08](https://github.com/jeysonj2/open-wc-create/commit/bde8e0869acceb77bc28c50784d5f1357b620973))
+* **deps:** update dependency prompts to ^2.4.1 ([65253ef](https://github.com/jeysonj2/open-wc-create/commit/65253ef243a36a6bacd7db1f13af3cd998adebf5))
+* **deps:** update dependency prompts to ^2.4.2 ([5302e58](https://github.com/jeysonj2/open-wc-create/commit/5302e58262fd592cd1bd6bf1ad1e6a99cfb357f3))
+* **deps:** update dependency semver to ^7.3.5 ([b9d450d](https://github.com/jeysonj2/open-wc-create/commit/b9d450d9acb9fa9998ca531a7811ea1929387258))
+* dont analyze dist ([99fed75](https://github.com/jeysonj2/open-wc-create/commit/99fed751431addb3fbe055eedc953dce45b06342))
+* ejs render issue by hard coding npm run in readmes ([0500372](https://github.com/jeysonj2/open-wc-create/commit/0500372233425613d74c3c1a14678cb1a1e49bca))
+* remove `git add` from the lint-staged config ([2a4e9af](https://github.com/jeysonj2/open-wc-create/commit/2a4e9af3805e888d4d7875f6758480d745472c37))
+* **ts:** add incremental compilation to tsconfig.json ([c4e2010](https://github.com/jeysonj2/open-wc-create/commit/c4e2010d79db299be8b0d413257cba7a31c7ad06))
+* use `--litelement` switch with cem/a ([e7f138c](https://github.com/jeysonj2/open-wc-create/commit/e7f138ccd4f18fd731b980dce7820b56fee69276))
+
 ### [0.38.69](https://github.com/open-wc/create/compare/v0.38.68...v0.38.69) (2023-02-06)
 
 ### [0.38.68](https://github.com/open-wc/create/compare/v0.38.67...v0.38.68) (2023-01-22)
