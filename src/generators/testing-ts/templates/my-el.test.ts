@@ -4,24 +4,24 @@ import { <%= className %> } from '../src/<%= className %>.js';
 import '../src/<%= tagName %>.js';
 
 describe('<%= className %>', () => {
-  it('has a default title "Hey there" and counter 5', async () => {
+  it('has a default header "Hey there" and counter 1', async () => {
     const el = await fixture<<%= className %>>(html`<<%= tagName %>></<%= tagName %>>`);
 
-    expect(el.title).to.equal('Hey there');
-    expect(el.counter).to.equal(5);
+    expect(el.header).to.equal('Hey there');
+    expect(el.counter).to.equal(1);
   });
 
   it('increases the counter on button click', async () => {
     const el = await fixture<<%= className %>>(html`<<%= tagName %>></<%= tagName %>>`);
     el.shadowRoot!.querySelector('button')!.click();
 
-    expect(el.counter).to.equal(6);
+    expect(el.counter).to.equal(2);
   });
 
-  it('can override the title via attribute', async () => {
-    const el = await fixture<<%= className %>>(html`<<%= tagName %> title="attribute title"></<%= tagName %>>`);
+  it('can override the header via attribute', async () => {
+    const el = await fixture<<%= className %>>(html`<<%= tagName %> header="attribute header"></<%= tagName %>>`);
 
-    expect(el.title).to.equal('attribute title');
+    expect(el.header).to.equal('attribute header');
   });
 
   it('passes the a11y audit', async () => {

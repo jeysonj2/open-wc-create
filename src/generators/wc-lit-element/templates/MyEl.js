@@ -17,7 +17,7 @@ export class <%= className %> extends LitElement {
   constructor() {
     super();
     this.header = 'Hey there';
-    this.counter = 5;
+    this.counter = 1;
   }
 
   __increment() {

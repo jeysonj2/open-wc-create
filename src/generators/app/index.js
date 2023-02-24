@@ -87,7 +87,7 @@ if (overrides.help) {
     },
     {
       header: 'Usage',
-      content: '$ npm init @open-wc [<options>]',
+      content: '$ npm init @izwc [<options>]',
     },
     {
       header: 'Options',
@@ -124,6 +124,7 @@ export const AppMixin = subclass =>
             { title: 'Scaffold a new project', value: 'scaffold' },
             { title: 'Upgrade an existing project', value: 'upgrade' },
           ],
+          initial: 0,
         },
         {
           type: (prev, all) => (all.type === 'scaffold' ? 'select' : null),
@@ -160,6 +161,7 @@ export const AppMixin = subclass =>
             { title: 'No', value: 'false' },
             { title: 'Yes', value: 'true' },
           ],
+          initial: 1,
         },
         {
           type: (prev, all) => (all.tagName ? null : 'text'),

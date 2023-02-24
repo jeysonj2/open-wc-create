@@ -1,16 +1,37 @@
 import chalk from 'chalk';
 
+const at = chalk.green('@izwc');
+const fromHamburgWithLove = chalk.red('From Hamburg with love ❤️⚓');
+
 export default `
-        _.,,,,,,,,,._
-     .d''           \`\`b.       ${chalk.underline('Open Web Components Recommendations')}
-   .p'      Open       \`q.
- .d'    Web Components  \`b.    Start or upgrade your web component project with
- .d'                     \`b.   ease. All our recommendations at your fingertips.
- ::   .................   ::
- \`p.                     .q'
-  \`p.    open-wc.org    .q'
-   \`b.     @openWc     .d'
-     \`q..            ..,'      See more details at https://open-wc.org/init/
-        '',,,,,,,,,,''
+░░░░░░░░░░▄███████▄░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+░░░░░░░░░▐██▀░░░▀██▌░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+░░░░░░░░░▐██▄░░░▄██▌░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+░░░░░░░░░░▀███████▀░░░░░░░░░░░░░┌──┐░░┌┐░░░░┌─┐░░░░░░░░░░░░
+░░░░░░░░░░░░▐█▄█▌░░░░░░░░░░░░░░░└││┼─┬┤└┬─┬┬┼─├─┬┬┬─┐░░░░░░
+░░░░░░░░░░▐███▄███▌░░░░░░░░░░░░░┌││┤│││┌┤┴┤┌┤─┤┴┤┌┤┼│░░░░░░
+░░░░░░░░░░░░▐█▄█▌░░░░░░░░░░░░░░░└──┴┴─┴─┴─┴┘└─┴─┴┘└─┘░░░░░░
+░░░░░░░░░░░░▐█▄█▌░░░░░░░░░░░░░░░░░░Web░░Components░░░░░░░░░
+░░░░░░░░░░░░▐█▄█▌░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+░░░░░░░░░░░░▐█▄█▌░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+░░▄█▄░░░░░░░▐█▄█▌░░░░░░░▄█▄░░░░░░░░CODE░GENERATOR░░░░░░░░░░
+▄█████▄░░░░░▐█▄█▌░░░░░▄█████▄░░░░░░░░░░${at}░░░░░░░░░░░░░░░
+░░███░░░░░░░▐█▄█▌░░░░░░░███░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+░░███▄░░░░░▄██▄██▄░░░░░▄███░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+░░▀████▄▄▄████▄████▄▄▄████▀░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+░░░░▀█████████▄█████████▀░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+░░░░░░▀███████▄███████▀░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+░░░░░░░░░▀████▄████▀░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+░░░░░░░░░░░░▀█▄█▀░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+░░░░░░░░░░░░░░▀░░░░░░░░░░░${fromHamburgWithLove}
+
+${chalk.underline('IZWC - Open Web Components Recommendations')}
+
+Start or upgrade your web component project with ease.
+All our recommendations at your fingertips.
+
+Based on the Open Web Components recommendations.
+open-wc.org / @openWc
+See more details at https://open-wc.org/init/
 
 `;
