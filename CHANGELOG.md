@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.3](https://github.com/jeysonj2/open-wc-create/compare/v1.0.2...v1.0.3) (2023-02-25)
+
+
+### Bug Fixes
+
+* changed demo header on web components templates ([8f8695d](https://github.com/jeysonj2/open-wc-create/commit/8f8695d759113ac372939de230e23e1ef3e576ce))
+
 ### [1.0.2](https://github.com/jeysonj2/open-wc-create/compare/v1.0.1...v1.0.2) (2023-02-25)
 
 ### [1.0.1](https://github.com/jeysonj2/open-wc-create/compare/v0.1.0...v1.0.1) (2023-02-25)
