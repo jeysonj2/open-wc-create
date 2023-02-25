@@ -328,7 +328,7 @@ export async function writeFilesToDisk() {
   return answers.writeToDisk;
 }
 
-export function optionsToCommand(options, generatorName = '@open-wc') {
+export function optionsToCommand(options, generatorName = '@izwc') {
   let command = `npm init ${generatorName} `;
   Object.keys(options).forEach(key => {
     if (key !== '_scaffoldFilesFor') {

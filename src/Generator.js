@@ -45,7 +45,7 @@ class Generator {
     this.wantsNpmInstall = true;
     this.wantsWriteToDisk = true;
     this.wantsRecreateInfo = true;
-    this.generatorName = '@open-wc';
+    this.generatorName = '@izwc';
   }
 
   execute() {

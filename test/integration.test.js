@@ -2,12 +2,12 @@
 import _rimraf from 'rimraf';
 import chai from 'chai';
 import chaiFs from 'chai-fs';
-import { exec as _exec } from 'child_process';
+import { exec as _exec, execSync } from 'child_process';
 import { promisify } from 'util';
 import { lstatSync, readdirSync, readFileSync } from 'fs';
 import { join } from 'path';
 import { ESLint } from 'eslint';
-import { generateCommand } from './generate-command.js';
+import { stripUserDir, createTypes } from './generate-command.js';
 
 const exec = promisify(_exec);
 
@@ -29,22 +29,14 @@ const getFileMessages = ({ messages, filePath }) =>
         .join('\n\n')
         .trimEnd();
 
-const ACTUAL_PATH = join(process.cwd(), './scaffold-app');
+const OUTPUT_PATH = join(__dirname, './output/');
+execSync(`rm -rf ${OUTPUT_PATH}*`);
 
 /**
  * Deletes the test files
  */
-async function deleteGenerated() {
-  await rimraf(ACTUAL_PATH);
-}
-
-/**
- * Removes text from the cli output which is specific to the local environment, i.e. the full path to the output dir.
- * @param  {string} output raw output
- * @return {string}        cleaned output
- */
-function stripUserDir(output) {
-  return output.replace(/\b(.*)\/scaffold-app/, '/scaffold-app');
+async function deleteGenerated(actualPath) {
+  await rimraf(actualPath);
 }
 
 /**
@@ -72,65 +64,85 @@ function checkSnapshotContents(expectedPath, actualPath) {
   });
 }
 
-let stdout;
-let stderr;
-let EXPECTED_OUTPUT;
+function create(typeOfCreate = 'app') {
+  const createType = createTypes.has(typeOfCreate) ? typeOfCreate : 'app';
 
-const generate = ({ command, expectedPath }) =>
-  async function generateTestProject() {
-    ({ stdout, stderr } = await exec(command));
-    const EXPECTED_PATH = join(expectedPath, '../fully-loaded-app.output.txt');
-    EXPECTED_OUTPUT = readFileSync(EXPECTED_PATH, 'utf-8');
+  let stdout;
+  let stderr;
+  let EXPECTED_OUTPUT = '';
+
+  const generate = ({ command, expectedPath, suffixPath }) =>
+    async function generateTestProject() {
+      ({ stdout, stderr } = await exec(command));
+      const EXPECTED_PATH = join(expectedPath, `../${suffixPath}.output.txt`);
+      EXPECTED_OUTPUT = readFileSync(EXPECTED_PATH, 'utf-8');
+    };
+
+  return function createTest() {
+    this.timeout(10000);
+
+    const suffixPath = createTypes.get(createType)?.suffixPath || 'fully-loaded-app';
+    const generateCommand =
+      createTypes.get(createType)?.generateFn ||
+      (() => {
+        throw new Error('No generate function found');
+      });
+
+    const destinationPath = join(OUTPUT_PATH, suffixPath);
+    const expectedPath = join(__dirname, `./snapshots/${suffixPath}`);
+    const command = generateCommand({ destinationPath });
+
+    before(generate({ command, expectedPath, suffixPath }));
+
+    after(async () => deleteGenerated(destinationPath));
+
+    it('scaffolds the project', async () => {
+      // Check that all files exist, without checking their contents
+      expect(destinationPath).to.be.a.directory().and.deep.equal(expectedPath);
+    });
+
+    it('generates expected file contents', () => {
+      // Check recursively all file contents
+      checkSnapshotContents(expectedPath, destinationPath);
+    });
+
+    it('outputs expected message', () => {
+      expect(stripUserDir(stdout, suffixPath)).to.equal(stripUserDir(EXPECTED_OUTPUT, suffixPath));
+    });
+
+    it('does not exit with an error', () => {
+      expect(stderr).to.not.be.ok;
+    });
+
+    it('generates a project which passes linting', async () => {
+      const linter = new ESLint({ useEslintrc: true });
+      const results = await linter.lintFiles([destinationPath]);
+      const errorCountTotal = results.reduce((sum, r) => sum + r.errorCount, 0);
+      const warningCountTotal = results.reduce((sum, r) => sum + r.warningCount, 0);
+      const prettyOutput = `\n\n${results.map(getFileMessages).join('\n')}\n\n`;
+      expect(errorCountTotal, 'error count').to.equal(0, prettyOutput);
+      expect(warningCountTotal, 'warning count').to.equal(0, prettyOutput);
+    });
+
+    // if type is app, run the following tests
+    if (typeOfCreate === 'app') {
+      it('generates a project with a custom-elements manifest', async () => {
+        const { customElements } = JSON.parse(
+          readFileSync(join(destinationPath, 'package.json'), 'utf8'),
+        );
+        expect(customElements).to.equal('custom-elements.json');
+        const e = await exec('npm run analyze', { cwd: destinationPath });
+        expect(e.stderr, stderr).to.not.be.ok;
+        const manifest = JSON.parse(
+          readFileSync(join(destinationPath, 'custom-elements.json'), 'utf8'),
+        );
+        expect(manifest.modules.length).to.equal(2);
+      });
+    }
   };
+}
 
-describe('create', function create() {
-  this.timeout(10000);
-
-  // For some reason, this doesn't do anything
-  const destinationPath = join(__dirname, './output');
-
-  const expectedPath = join(__dirname, './snapshots/fully-loaded-app');
-
-  const command = generateCommand({ destinationPath });
-
-  before(generate({ command, expectedPath }));
-
-  after(deleteGenerated);
-
-  it('scaffolds a fully loaded app project', async () => {
-    // Check that all files exist, without checking their contents
-    expect(ACTUAL_PATH).to.be.a.directory().and.deep.equal(expectedPath);
-  });
-
-  it('generates expected file contents', () => {
-    // Check recursively all file contents
-    checkSnapshotContents(expectedPath, ACTUAL_PATH);
-  });
-
-  it.skip('outputs expected message', () => {
-    expect(stripUserDir(stdout)).to.equal(stripUserDir(EXPECTED_OUTPUT));
-  });
-
-  it('does not exit with an error', () => {
-    expect(stderr).to.not.be.ok;
-  });
-
-  it('generates a project which passes linting', async () => {
-    const linter = new ESLint({ useEslintrc: true });
-    const results = await linter.lintFiles([ACTUAL_PATH]);
-    const errorCountTotal = results.reduce((sum, r) => sum + r.errorCount, 0);
-    const warningCountTotal = results.reduce((sum, r) => sum + r.warningCount, 0);
-    const prettyOutput = `\n\n${results.map(getFileMessages).join('\n')}\n\n`;
-    expect(errorCountTotal, 'error count').to.equal(0, prettyOutput);
-    expect(warningCountTotal, 'warning count').to.equal(0, prettyOutput);
-  });
-
-  it('generates a project with a custom-elements manifest', async () => {
-    const { customElements } = JSON.parse(readFileSync(join(ACTUAL_PATH, 'package.json'), 'utf8'));
-    expect(customElements).to.equal('custom-elements.json');
-    const e = await exec('npm run analyze', { cwd: ACTUAL_PATH });
-    expect(e.stderr, stderr).to.not.be.ok;
-    const manifest = JSON.parse(readFileSync(join(ACTUAL_PATH, 'custom-elements.json'), 'utf8'));
-    expect(manifest.modules.length).to.equal(2);
-  });
-});
+// Generate snapshots by looping through the createTypes map
+for (const [type] of createTypes) {
+  describe(`create ${type}`, create(type));
+}

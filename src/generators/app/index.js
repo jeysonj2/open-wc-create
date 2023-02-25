@@ -13,8 +13,8 @@ import { gatherMixins } from './gatherMixins.js';
  * Allows to control the data via command line
  *
  * example:
- * npm init @open-wc --type scaffold --scaffoldType app --tagName foo-bar --installDependencies false
- * npm init @open-wc --type upgrade --features linting demoing --tagName foo-bar --installDependencies false
+ * npm init @izwc --type scaffold --scaffoldType app --tagName foo-bar --installDependencies false
+ * npm init @izwc --type upgrade --features linting demoing --tagName foo-bar --installDependencies false
  */
 const optionDefinitions = [
   {
@@ -74,6 +74,12 @@ const optionDefinitions = [
     name: 'help',
     description: 'This help message',
     type: Boolean,
+  },
+  {
+    name: 'overwriteFile',
+    description: 'Whether or not to overrite the files',
+    type: String,
+    typeLabel: '{underline true|false|always}',
   },
 ];
 
@@ -191,6 +197,11 @@ export const AppMixin = subclass =>
           process.exit();
         },
       });
+
+      // include destinationPath (if not empty) in options
+      if (overrides.destinationPath) {
+        this.options.destinationPath = overrides.destinationPath;
+      }
 
       if (this.options.type === 'scaffold') {
         // when using the new project scaffold, infer _scaffoldFilesFor from selected features

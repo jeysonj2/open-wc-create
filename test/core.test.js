@@ -260,32 +260,32 @@ describe('optionsToCommand', () => {
     const options = {
       type: 'scaffold',
     };
-    expect(optionsToCommand(options)).to.equal('npm init @open-wc --type scaffold ');
+    expect(optionsToCommand(options)).to.equal('npm init @izwc --type scaffold ');
   });
 
   it('supports numbers', async () => {
     const options = {
       version: 2,
     };
-    expect(optionsToCommand(options)).to.equal('npm init @open-wc --version 2 ');
+    expect(optionsToCommand(options)).to.equal('npm init @izwc --version 2 ');
   });
 
   it('supports boolean', async () => {
     const options = {
       writeToDisk: true,
     };
-    expect(optionsToCommand(options)).to.equal('npm init @open-wc --writeToDisk ');
+    expect(optionsToCommand(options)).to.equal('npm init @izwc --writeToDisk ');
     const options2 = {
       writeToDisk: false,
     };
-    expect(optionsToCommand(options2)).to.equal('npm init @open-wc ');
+    expect(optionsToCommand(options2)).to.equal('npm init @izwc ');
   });
 
   it('supports arrays', async () => {
     const options = {
       features: ['testing', 'demoing'],
     };
-    expect(optionsToCommand(options)).to.equal('npm init @open-wc --features testing demoing ');
+    expect(optionsToCommand(options)).to.equal('npm init @izwc --features testing demoing ');
   });
 
   it('converts real example', async () => {
@@ -297,7 +297,7 @@ describe('optionsToCommand', () => {
       installDependencies: 'false',
     };
     expect(optionsToCommand(options)).to.equal(
-      'npm init @open-wc --type scaffold --scaffoldType wc --features testing demoing --tagName foo-bar --installDependencies false ',
+      'npm init @izwc --type scaffold --scaffoldType wc --features testing demoing --tagName foo-bar --installDependencies false ',
     );
   });
 });

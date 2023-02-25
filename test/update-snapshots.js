@@ -1,24 +1,51 @@
 import { join } from 'path';
-
-import { existsSync } from 'fs';
-
+import { writeFileSync } from 'fs';
 import { execSync } from 'child_process';
 
-import { generateCommand } from './generate-command.js';
+import { createTypes, stripUserDir } from './generate-command.js';
 
-const destinationPath = join(__dirname, './snapshots');
+// Remove the snapshots directory
+const snapshotPath = join(__dirname, './snapshots');
+execSync(`rm -rf ${snapshotPath}/*`);
 
-const UPDATE_SNAPSHOTS_COMMAND = generateCommand({ destinationPath });
+/**
+ * Returns the path to the snapshots directory
+ * @param  {string} suffix
+ * @return {string}
+ * @example
+ * destinationPath('fully-loaded-app')
+ * // => '/path/to/izwc/create/test/snapshots/fully-loaded-app'
+ * destinationPath('web-component')
+ * // => '/path/to/izwc/create/test/snapshots/web-component'
+ */
+function destinationPath(suffix) {
+  return join(snapshotPath, `./${suffix}`);
+}
 
-execSync(UPDATE_SNAPSHOTS_COMMAND);
+/**
+ * Writes the output of the command to a file
+ * @param  {string} output
+ * @param  {string} suffix
+ * @example
+ * writeCommandOutputToFile('some output', 'fully-loaded-app')
+ * // => writes 'some output' to '/path/to/izwc/create/test/snapshots/fully-loaded-app.output.txt'
+ * writeCommandOutputToFile('some output', 'web-component')
+ * // => writes 'some output' to '/path/to/izwc/create/test/snapshots/web-component.output.txt'
+ */
+function writeCommandOutputToFile(output, suffix) {
+  const snapshotOutputPath = join(snapshotPath, `./${suffix}.output.txt`);
+  const content = stripUserDir(output, suffix).split('snapshots/').join('output/');
+  writeFileSync(snapshotOutputPath, content);
+}
 
-// HACK(bennyp): destinationPath doesn't work.
-// see https://github.com/open-wc/open-wc/issues/1040
-const OOPS_I_WROTE_TO_PACKAGE_ROOT = join(process.cwd(), './scaffold-app');
+function generateSnapshot(type) {
+  const { suffixPath, generateFn } = createTypes.get(type);
+  const command = generateFn({ destinationPath: destinationPath(suffixPath) });
+  const output = execSync(command);
+  writeCommandOutputToFile(output.toString(), suffixPath);
+}
 
-const DESTINATION_PATH = join(__dirname, './snapshots/fully-loaded-app');
-
-if (existsSync(OOPS_I_WROTE_TO_PACKAGE_ROOT)) {
-  execSync(`rm -rf ${DESTINATION_PATH}`);
-  execSync(`mv -f ${OOPS_I_WROTE_TO_PACKAGE_ROOT} ${DESTINATION_PATH}`);
+// Generate snapshots by looping through the createTypes map
+for (const [type] of createTypes) {
+  generateSnapshot(type);
 }

@@ -35,42 +35,40 @@ Note: you can exit any time with Ctrl+C or Esc
 ./
 ├── test/
 │   ├── output/
-│   │   ├── fully-loaded-app/
+│   │   ├── web-component-ts/
 │   │   │   ├── .storybook/
 │   │   │   │   ├── main.js
 │   │   │   │   ├── package.json
-│   │   │   │   ├── server.js
 │   │   │   │   └── server.mjs
 │   │   │   ├── .vscode/
 │   │   │   │   └── extensions.json
-│   │   │   ├── assets/
-│   │   │   │   └── open-wc-logo.svg
+│   │   │   ├── demo/
+│   │   │   │   └── index.html
 │   │   │   ├── src/
-│   │   │   │   └── scaffold-app.js
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── scaffold-wc.ts
+│   │   │   │   └── ScaffoldWc.ts
 │   │   │   ├── stories/
-│   │   │   │   └── scaffold-app.stories.js
+│   │   │   │   └── index.stories.ts
 │   │   │   ├── test/
-│   │   │   │   └── scaffold-app.test.js
+│   │   │   │   └── scaffold-wc.test.ts
 │   │   │   ├── .editorconfig
 │   │   │   ├── .gitignore
-│   │   │   ├── custom-elements.json
-│   │   │   ├── index.html
 │   │   │   ├── LICENSE
 │   │   │   ├── package.json
 │   │   │   ├── README.md
-│   │   │   ├── rollup.config.js
-│   │   │   ├── web-dev-server.config.js
-│   │   │   ├── web-test-runner.config.js
+│   │   │   ├── tsconfig.json
+│   │   │   ├── web-dev-server.config.mjs
 │   │   │   └── web-test-runner.config.mjs
 
 Writing..... done
 
 If you want to rerun this exact same generator you can do so by executing:
-npm init @izwc --destinationPath /path/to/izwc/create/test/output/fully-loaded-app --type scaffold --scaffoldType app --features linting testing demoing building --typescript false --tagName scaffold-app --writeToDisk true --installDependencies false 
+npm init @izwc --destinationPath /path/to/izwc/create/test/output/web-component-ts --type scaffold --scaffoldType wc --features linting testing demoing --typescript true --tagName scaffold-wc --writeToDisk true --installDependencies false 
 
 You are all set up now!
 
 All you need to do is run:
-  cd scaffold-app
+  cd scaffold-wc
   npm run start
 
