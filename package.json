@@ -24,7 +24,6 @@
     "lint:eslint": "eslint --ext .ts,.js,.mjs,.cjs .",
     "lint:prettier": "prettier \"**/*.{ts,js,mjs,cjs,md}\" --check --ignore-path .eslintignore",
     "format": "eslint --ext .ts,.js,.mjs,.cjs  --fix && prettier \"**/*.{ts,js,mjs,cjs,md}\" --check --ignore-path .eslintignore --write",
-    "standard-version": "standard-version",
     "release": "standard-version && git push --follow-tags origin master && npm publish",
     "start": "npm run build && node ./dist/create.js",
     "test": "npm run test:node",
