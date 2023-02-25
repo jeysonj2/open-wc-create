@@ -1,6 +1,6 @@
 {
   "name": "@izwc/create",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "publishConfig": {
     "access": "public"
   },
@@ -14,7 +14,7 @@
     "url": "https://github.com/jeysonj2/open-wc-create/issues"
   },
   "author": "open-wc & izwc",
-  "homepage": "https://github.com/jeysonj2/open-wc-create/create",
+  "homepage": "https://github.com/jeysonj2/open-wc-create",
   "bin": {
     "create-open-wc": "./dist/create.js"
   },
