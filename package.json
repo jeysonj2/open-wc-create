@@ -1,6 +1,6 @@
 {
   "name": "@izwc/create",
-  "version": "0.0.0",
+  "version": "1.0.1",
   "publishConfig": {
     "access": "public"
   },
@@ -24,7 +24,8 @@
     "lint:eslint": "eslint --ext .ts,.js,.mjs,.cjs .",
     "lint:prettier": "prettier \"**/*.{ts,js,mjs,cjs,md}\" --check --ignore-path .eslintignore",
     "format": "eslint --ext .ts,.js,.mjs,.cjs  --fix && prettier \"**/*.{ts,js,mjs,cjs,md}\" --check --ignore-path .eslintignore --write",
-    "release": "standard-version && git push --follow-tags origin master && npm publish",
+    "standard-version": "standard-version",
+    "release": "npm run standard-version && git push --follow-tags origin master && npm run build && npm publish",
     "start": "npm run build && node ./dist/create.js",
     "test": "npm run test:node",
     "test:node": "mocha --require @babel/register",
@@ -79,7 +80,7 @@
     "onchange": "^7.1.0",
     "prettier": "^2.4.1",
     "rollup-plugin-esbuild": "^5.0.0",
-    "standard-version": "^9.3.2"
+    "standard-version": "^9.5.0"
   },
   "prettier": {
     "singleQuote": true,

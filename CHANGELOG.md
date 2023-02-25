@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.1](https://github.com/jeysonj2/open-wc-create/compare/v0.1.0...v1.0.1) (2023-02-25)
+
+
+### ⚠ BREAKING CHANGES
+
+* Let's start a new major version
+
+### Features
+
+* npm init [@izwc](https://github.com/izwc)@latest ([c43048c](https://github.com/jeysonj2/open-wc-create/commit/c43048ce026822b39494a605a17c993a114e112e))
+
 ## [0.1.0](https://github.com/jeysonj2/open-wc-create/compare/v0.1.1...v0.1.0) (2023-02-25)
 
 
