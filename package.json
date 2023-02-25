@@ -1,6 +1,6 @@
 {
   "name": "@izwc/create",
-  "version": "0.38.76",
+  "version": "0.1.0",
   "publishConfig": {
     "access": "public"
   },

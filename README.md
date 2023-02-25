@@ -15,31 +15,50 @@ Web component project scaffolding.
 ## Usage
 
 ```bash
-npm init @open-wc
+npm init @izwc@latest
 ```
 
 <div class="custom-block warning"><p class="custom-block-title">WARNING</p> <p><code>npm init</code> requires node 14 &amp; npm 6 or higher</p></div>
 
 This will kickstart a menu guiding you through all available actions.
 
-    $ npm init @open-wc
-    npx: installed 14 in 4.074s
-            _.,,,,,,,,,._
-         .d''           ``b.       Open Web Components Recommendations
-       .p'      Open       `q.
-     .d'    Web Components  `b.    Start or upgrade your web component project with
-     .d'                     `b.   ease. All our recommendations at your fingertips.
-     ::   .................   ::
-     `p.                     .q'   See more details at https://open-wc.org/init/
-      `p.    open-wc.org    .q'
-       `b.     @openWc     .d'
-         `q..            ..,'      Note: you can exit any time with Ctrl+C or Esc
-            '',,,,,,,,,,''
+    $ npm init @izwc@latest
+
+    ░░░░░░░░░░▄███████▄░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+    ░░░░░░░░░▐██▀░░░▀██▌░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+    ░░░░░░░░░▐██▄░░░▄██▌░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+    ░░░░░░░░░░▀███████▀░░░░░░░░░░░░░┌──┐░░┌┐░░░░┌─┐░░░░░░░░░░░░
+    ░░░░░░░░░░░░▐█▄█▌░░░░░░░░░░░░░░░└││┼─┬┤└┬─┬┬┼─├─┬┬┬─┐░░░░░░
+    ░░░░░░░░░░▐███▄███▌░░░░░░░░░░░░░┌││┤│││┌┤┴┤┌┤─┤┴┤┌┤┼│░░░░░░
+    ░░░░░░░░░░░░▐█▄█▌░░░░░░░░░░░░░░░└──┴┴─┴─┴─┴┘└─┴─┴┘└─┘░░░░░░
+    ░░░░░░░░░░░░▐█▄█▌░░░░░░░░░░░░░░░░░░Web░░Components░░░░░░░░░
+    ░░░░░░░░░░░░▐█▄█▌░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+    ░░░░░░░░░░░░▐█▄█▌░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+    ░░▄█▄░░░░░░░▐█▄█▌░░░░░░░▄█▄░░░░░░░░CODE░GENERATOR░░░░░░░░░░
+    ▄█████▄░░░░░▐█▄█▌░░░░░▄█████▄░░░░░░░░░░@izwc░░░░░░░░░░░░░░░
+    ░░███░░░░░░░▐█▄█▌░░░░░░░███░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+    ░░███▄░░░░░▄██▄██▄░░░░░▄███░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+    ░░▀████▄▄▄████▄████▄▄▄████▀░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+    ░░░░▀█████████▄█████████▀░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+    ░░░░░░▀███████▄███████▀░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+    ░░░░░░░░░▀████▄████▀░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+    ░░░░░░░░░░░░▀█▄█▀░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+    ░░░░░░░░░░░░░░▀░░░░░░░░░░░From Hamburg with love ❤️⚓
+
+    IZWC - Open Web Components Recommendations
+
+    Start or upgrade your web component project with ease.
+    All our recommendations at your fingertips.
+
+    Based on the Open Web Components recommendations.
+    open-wc.org / @openWc
+    See more details at https://open-wc.org/init/
 
 
+    Note: you can exit any time with Ctrl+C or Esc
     ? What would you like to do today? › - Use arrow-keys. Return to submit.
-    ❯  Scaffold a new project
-       Upgrade an existing project
+    ❯   Scaffold a new project
+        Upgrade an existing project
 
 Our generators are very modular you can pick and choose as you see fit.
 
@@ -57,6 +76,7 @@ You may pass options to skip the CLI wizard in part or in whole.
 | `--tagName`             | string                                      | The tag name for the web component or app shell element                                                                   |     |
 | `--installDependencies` | `yarn`\|`npm`\|`false`                      | Whether to install dependencies. Choose npm or yarn to install with those package managers, or false to skip installation |     |
 | `--writeToDisk`         | `true`\|`false`                             | Whether or not to actually write the files to disk                                                                        |     |
+| `--overwriteFile`         | `true`\|`false`\|`always`                  | Whether or not to overrite the files                                                                        |     |
 | `--help`                |                                             | This help message                                                                                                         |     |
 
 ## Scaffold generators
@@ -67,7 +87,7 @@ They will create a new folder and set up everything you need to get started imme
 Example usage:
 
 ```bash
-npm init @open-wc
+npm init @izwc@latest
 # Select "Scaffold a new project"
 ```
 
@@ -90,7 +110,7 @@ Example usage:
 
 ```bash
 cd existing-web-component
-npm init @open-wc
+npm init @izwc@latest
 # select "Upgrade an existing project" or add features while scaffolding
 ```
 
