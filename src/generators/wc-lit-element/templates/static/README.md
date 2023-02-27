@@ -1,18 +1,18 @@
-# \<<%= tagName %>>
+# \<<%= organization %><%= tagName %>>
 
 This webcomponent follows the [open-wc](https://github.com/open-wc/open-wc) recommendation.
 
 ## Installation
 
 ```bash
-npm i <%= tagName %>
+npm i <%= organization %><%= tagName %>
 ```
 
 ## Usage
 
 ```html
 <script type="module">
-  import '<%= tagName %>/<%= tagName %>.js';
+  import '<%= organization %><%= tagName %>/<%= tagName %>.js';
 </script>
 
 <<%= tagName %>></<%= tagName %>>
