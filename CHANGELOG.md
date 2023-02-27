@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.1](https://github.com/jeysonj2/open-wc-create/compare/v1.1.0...v1.1.1) (2023-02-27)
+
+
+### Bug Fixes
+
+* included organization in the README.md files of the templates ([af9fd2f](https://github.com/jeysonj2/open-wc-create/commit/af9fd2f999817b368382e109f17bf47eb7a8888b))
+
 ## [1.1.0](https://github.com/jeysonj2/open-wc-create/compare/v1.0.3...v1.1.0) (2023-02-27)
 
 
