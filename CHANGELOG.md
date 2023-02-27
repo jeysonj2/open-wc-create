@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/jeysonj2/open-wc-create/compare/v1.0.3...v1.1.0) (2023-02-27)
+
+
+### Features
+
+* Added option to include the organization in the generated app or wc ([a738cbd](https://github.com/jeysonj2/open-wc-create/commit/a738cbd773862bc0e14318fb4d87fd583f7241bf))
+
 ### [1.0.3](https://github.com/jeysonj2/open-wc-create/compare/v1.0.2...v1.0.3) (2023-02-25)
 
 
