@@ -35,7 +35,7 @@ Note: you can exit any time with Ctrl+C or Esc
 ./
 ├── test/
 │   ├── output/
-│   │   ├── web-component-ts/
+│   │   ├── web-component-ts-org/
 │   │   │   ├── .storybook/
 │   │   │   │   ├── main.js
 │   │   │   │   ├── package.json
@@ -64,11 +64,11 @@ Note: you can exit any time with Ctrl+C or Esc
 Writing..... done
 
 If you want to rerun this exact same generator you can do so by executing:
-npm init @izwc@latest --destinationPath /path/to/izwc/create/test/output/web-component-ts --type scaffold --scaffoldType wc --features linting testing demoing --typescript true --tagName scaffold-wc --writeToDisk true --installDependencies false 
+npm init @izwc@latest --destinationPath /path/to/izwc/create/test/output/web-component-ts-org --organization @izwc-test --type scaffold --scaffoldType wc --features linting testing demoing --typescript true --tagName scaffold-wc --writeToDisk true --installDependencies false 
 
 You are all set up now!
 
 All you need to do is run:
-  cd /path/to/izwc/create/test/output/web-component-ts
+  cd /path/to/izwc/create/test/output/web-component-ts-org
   npm run start
 

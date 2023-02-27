@@ -69,6 +69,7 @@ You may pass options to skip the CLI wizard in part or in whole.
 | Option                  | Type                                        | Description                                                                                                               |     |
 | ----------------------- | ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | --- |
 | `--destinationPath`     | path                                        | The path the generator will write files to                                                                                |     |
+| `--organization`        | string                                      | Added as a prefix to the package name e.g. @my-org/my-element                                                             |     |
 | `--type`                | `scaffold`\|`upgrade`                       | Choose scaffold to create a new project or upgrade to add features to an existing project                                 |     |
 | `--scaffoldType`        | `wc`\|`app`                                 | The type of project to scaffold. wc for a single published component, app for an application                              |     |
 | `--features`            | `linting`\|`testing`\|`demoing`\|`building` | Which features to include. linting, testing, demoing, or building                                                         |     |
@@ -76,7 +77,7 @@ You may pass options to skip the CLI wizard in part or in whole.
 | `--tagName`             | string                                      | The tag name for the web component or app shell element                                                                   |     |
 | `--installDependencies` | `yarn`\|`npm`\|`false`                      | Whether to install dependencies. Choose npm or yarn to install with those package managers, or false to skip installation |     |
 | `--writeToDisk`         | `true`\|`false`                             | Whether or not to actually write the files to disk                                                                        |     |
-| `--overwriteFile`         | `true`\|`false`\|`always`                  | Whether or not to overrite the files                                                                        |     |
+| `--overwriteFile`       | `true`\|`false`\|`always`                   | Whether or not to overrite the files                                                                                      |     |
 | `--help`                |                                             | This help message                                                                                                         |     |
 
 ## Scaffold generators

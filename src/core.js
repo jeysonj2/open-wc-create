@@ -329,11 +329,11 @@ export async function writeFilesToDisk() {
 }
 
 export function optionsToCommand(options, generatorName = '@izwc') {
-  let command = `npm init ${generatorName} `;
+  let command = `npm init ${generatorName}@latest `;
   Object.keys(options).forEach(key => {
     if (key !== '_scaffoldFilesFor') {
       const value = options[key];
-      if (typeof value === 'string' || typeof value === 'number') {
+      if ((typeof value === 'string' || typeof value === 'number') && value !== '') {
         command += `--${key} ${value} `;
       } else if (typeof value === 'boolean' && value === true) {
         command += `--${key} `;

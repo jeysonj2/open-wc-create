@@ -67,7 +67,11 @@ export const WcLitElementPackageMixin = subclass =>
       console.log('You are all set up now!');
       console.log('');
       console.log('All you need to do is run:');
-      console.log(`  cd ${this.templateData.tagName}`);
+      console.log(
+        `  cd ${
+          this.options.destinationPath ? this.options.destinationPath : this.templateData.tagName
+        }`,
+      );
       console.log('  npm run start');
       console.log('');
     }

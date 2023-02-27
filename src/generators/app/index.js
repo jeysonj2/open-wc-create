@@ -24,6 +24,12 @@ const optionDefinitions = [
     typeLabel: '{underline path}',
   },
   {
+    name: 'organization',
+    description: 'Added as a prefix to the package name e.g. @my-org/my-element',
+    type: String,
+    typeLabel: '{underline string}',
+  },
+  {
     name: 'type',
     description:
       'Choose {bold scaffold} to create a new project or {bold upgrade} to add features to an existing project',
@@ -201,6 +207,12 @@ export const AppMixin = subclass =>
       // include destinationPath (if not empty) in options
       if (overrides.destinationPath) {
         this.options.destinationPath = overrides.destinationPath;
+      }
+
+      // include organization (if not empty) in options
+      this.options.organization = '';
+      if (overrides.organization) {
+        this.options.organization = overrides.organization;
       }
 
       if (this.options.type === 'scaffold') {

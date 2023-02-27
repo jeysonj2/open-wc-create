@@ -64,7 +64,7 @@ function checkSnapshotContents(expectedPath, actualPath) {
   });
 }
 
-function create(typeOfCreate = 'app') {
+function create(typeOfCreate = 'app', organization = '') {
   const createType = createTypes.has(typeOfCreate) ? typeOfCreate : 'app';
 
   let stdout;
@@ -81,7 +81,9 @@ function create(typeOfCreate = 'app') {
   return function createTest() {
     this.timeout(10000);
 
-    const suffixPath = createTypes.get(createType)?.suffixPath || 'fully-loaded-app';
+    let suffixPath = createTypes.get(createType)?.suffixPath || 'fully-loaded-app';
+    suffixPath = organization ? `${suffixPath}-org` : suffixPath;
+
     const generateCommand =
       createTypes.get(createType)?.generateFn ||
       (() => {
@@ -90,7 +92,7 @@ function create(typeOfCreate = 'app') {
 
     const destinationPath = join(OUTPUT_PATH, suffixPath);
     const expectedPath = join(__dirname, `./snapshots/${suffixPath}`);
-    const command = generateCommand({ destinationPath });
+    const command = generateCommand({ destinationPath, organization });
 
     before(generate({ command, expectedPath, suffixPath }));
 
@@ -146,3 +148,6 @@ function create(typeOfCreate = 'app') {
 for (const [type] of createTypes) {
   describe(`create ${type}`, create(type));
 }
+
+// Generates snapshots for wc-ts using an orgaization name
+describe(`create wc-ts-org`, create('wc-ts', '@izwc-test'));

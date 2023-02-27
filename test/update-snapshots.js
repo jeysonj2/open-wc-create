@@ -38,14 +38,24 @@ function writeCommandOutputToFile(output, suffix) {
   writeFileSync(snapshotOutputPath, content);
 }
 
-function generateSnapshot(type) {
+function generateSnapshot(type, organization) {
   const { suffixPath, generateFn } = createTypes.get(type);
-  const command = generateFn({ destinationPath: destinationPath(suffixPath) });
+  const finalSuffixPath = organization ? `${suffixPath}-org` : suffixPath;
+  const params = { destinationPath: destinationPath(finalSuffixPath) };
+
+  if (organization) {
+    params.organization = organization;
+  }
+
+  const command = generateFn(params);
   const output = execSync(command);
-  writeCommandOutputToFile(output.toString(), suffixPath);
+  writeCommandOutputToFile(output.toString(), finalSuffixPath);
 }
 
 // Generate snapshots by looping through the createTypes map
 for (const [type] of createTypes) {
   generateSnapshot(type);
 }
+
+// Generates snapshots for wc-ts using an orgaization name
+generateSnapshot('wc-ts', '@izwc-test');

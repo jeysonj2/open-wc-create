@@ -40,6 +40,7 @@ class Generator {
      */
     this.options = {
       destinationPath: 'auto',
+      organization: '',
     };
     this.templateData = {};
     this.wantsNpmInstall = true;
@@ -50,9 +51,16 @@ class Generator {
 
   execute() {
     if (this.options.tagName) {
-      const { tagName } = this.options;
+      const { tagName, organization } = this.options;
       const className = getClassName(tagName);
-      this.templateData = { ...this.templateData, tagName, className };
+
+      let org = organization || '';
+      // Adding the / to the end of the organization name
+      if (org && !org.endsWith('/')) {
+        org = `${org}/`;
+      }
+
+      this.templateData = { ...this.templateData, tagName, className, organization: org };
 
       if (this.options.destinationPath === 'auto') {
         this.options.destinationPath = process.cwd();

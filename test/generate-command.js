@@ -2,9 +2,9 @@ import { join } from 'path';
 
 const COMMAND_PATH = join(__dirname, '../src/create.js');
 
-export function generateCommand({ destinationPath = '.' } = {}) {
+export function generateCommand({ destinationPath = '.', organization = '' } = {}) {
   return `node -r @babel/register ${COMMAND_PATH} \
-      --destinationPath ${destinationPath} \
+      --destinationPath ${destinationPath}${organization ? ` --organization ${organization}` : ''} \
       --type scaffold \
       --scaffoldType app \
       --features linting testing demoing building \
@@ -16,9 +16,9 @@ export function generateCommand({ destinationPath = '.' } = {}) {
   `;
 }
 
-export function generateCommandWc({ destinationPath = '.' } = {}) {
+export function generateCommandWc({ destinationPath = '.', organization = '' } = {}) {
   return `node -r @babel/register ${COMMAND_PATH} \
-      --destinationPath ${destinationPath} \
+      --destinationPath ${destinationPath}${organization ? ` --organization ${organization}` : ''} \
       --type scaffold \
       --scaffoldType wc \
       --features linting testing demoing \
@@ -30,9 +30,9 @@ export function generateCommandWc({ destinationPath = '.' } = {}) {
   `;
 }
 
-export function generateCommandWcTs({ destinationPath = '.' } = {}) {
+export function generateCommandWcTs({ destinationPath = '.', organization = '' } = {}) {
   return `node -r @babel/register ${COMMAND_PATH} \
-      --destinationPath ${destinationPath} \
+      --destinationPath ${destinationPath}${organization ? ` --organization ${organization}` : ''} \
       --type scaffold \
       --scaffoldType wc \
       --features linting testing demoing \
@@ -74,8 +74,17 @@ export const createTypes = new Map([
  * @return {string}        cleaned output
  */
 export function stripUserDir(output, suffix = 'fully-loaded-app') {
-  const toStrip = new RegExp(`destinationPath.*${suffix}`, 'gm');
-  const toKeep = `destinationPath /path/to/izwc/create/test/output/${suffix}`;
+  let result = output;
 
-  return output.replace(toStrip, toKeep);
+  // destinationPath
+  let toStrip = new RegExp(`destinationPath.*${suffix}`, 'gm');
+  let toKeep = `destinationPath /path/to/izwc/create/test/output/${suffix}`;
+  result = result.replace(toStrip, toKeep);
+
+  // cd
+  toStrip = new RegExp(`cd.*${suffix}`, 'gm');
+  toKeep = `cd /path/to/izwc/create/test/output/${suffix}`;
+  result = result.replace(toStrip, toKeep);
+
+  return result;
 }
