@@ -1,4 +1,4 @@
-import { ScaffoldWc } from './ScaffoldWc.js';
+import { ScaffoldWc } from './src/ScaffoldWc.js';
 
 // Register the element with the browser
 const cElementsDefineFn = customElements?.define || window?.customElements?.define;
@@ -8,6 +8,6 @@ if (!cElementsDefineFn || !cElementsGetFn) {
   throw new Error('Custom Elements not supported');
 }
 
-if (!cElementsGetFn('scaffold-wc')) {
-  cElementsDefineFn('scaffold-wc', ScaffoldWc);
+if (!cElementsGetFn('izwc-test-scaffold-wc')) {
+  cElementsDefineFn('izwc-test-scaffold-wc', ScaffoldWc);
 }

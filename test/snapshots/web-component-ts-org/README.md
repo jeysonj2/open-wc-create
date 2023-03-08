@@ -12,7 +12,7 @@ npm i @izwc-test/scaffold-wc
 
 ```html
 <script type="module">
-  import '@izwc-test/scaffold-wc/scaffold-wc.js';
+  import '@izwc-test/scaffold-wc';
 </script>
 
 <scaffold-wc></scaffold-wc>

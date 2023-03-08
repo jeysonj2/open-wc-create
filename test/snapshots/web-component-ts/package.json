@@ -8,8 +8,8 @@
   "main": "dist/src/index.js",
   "module": "dist/src/index.js",
   "exports": {
-    ".": "./dist/src/index.js",
-    "./scaffold-wc.js": "./dist/src/scaffold-wc.js"
+    "./ScaffoldWc.js": "./dist/src/index.js",
+    ".": "./dist/src/scaffold-wc.js"
   },
   "scripts": {
     "analyze": "cem analyze --litelement",

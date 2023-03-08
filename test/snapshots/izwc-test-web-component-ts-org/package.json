@@ -1,6 +1,6 @@
 {
   "name": "@izwc-test/scaffold-wc",
-  "description": "Webcomponent scaffold-wc following open-wc recommendations",
+  "description": "Webcomponent izwc-test-scaffold-wc following open-wc recommendations",
   "license": "MIT",
   "author": "@izwc-test/scaffold-wc",
   "version": "0.0.0",

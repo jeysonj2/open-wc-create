@@ -8,6 +8,6 @@ if (!cElementsDefineFn || !cElementsGetFn) {
   throw new Error('Custom Elements not supported');
 }
 
-if (!cElementsGetFn('scaffold-wc')) {
-  cElementsDefineFn('scaffold-wc', ScaffoldWc);
+if (!cElementsGetFn('izwc-test-scaffold-wc')) {
+  cElementsDefineFn('izwc-test-scaffold-wc', ScaffoldWc);
 }

@@ -12,7 +12,7 @@ npm i scaffold-wc
 
 ```html
 <script type="module">
-  import 'scaffold-wc/scaffold-wc.js';
+  import 'scaffold-wc';
 </script>
 
 <scaffold-wc></scaffold-wc>
