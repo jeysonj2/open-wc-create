@@ -1,13 +1,12 @@
 import { <%= className %> } from './src/<%= className %>.js';
 
 // Register the element with the browser
-const cElementsDefineFn = customElements?.define || window?.customElements?.define;
-const cElementsGetFn = customElements?.get || window?.customElements?.get;
+const cElements = customElements ?? window?.customElements;
 
-if (!cElementsDefineFn || !cElementsGetFn) {
+if (!cElements) {
   throw new Error('Custom Elements not supported');
 }
 
-if (!cElementsGetFn('<%= tagPrefix %><%= tagName %>')) {
-  cElementsDefineFn('<%= tagPrefix %><%= tagName %>', <%= className %>);
+if (!cElements.get('<%= tagPrefix %><%= tagName %>')) {
+  cElements.define('<%= tagPrefix %><%= tagName %>', <%= className %>);
 }
