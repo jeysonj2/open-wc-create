@@ -38,13 +38,19 @@ function writeCommandOutputToFile(output, suffix) {
   writeFileSync(snapshotOutputPath, content);
 }
 
-function generateSnapshot(type, organization) {
+function generateSnapshot(type, { organization = '', tagPrefix = '' } = {}) {
   const { suffixPath, generateFn } = createTypes.get(type);
-  const finalSuffixPath = organization ? `${suffixPath}-org` : suffixPath;
+  let finalSuffixPath = organization ? `${suffixPath}-org` : suffixPath;
+  finalSuffixPath = tagPrefix ? `${tagPrefix}-${finalSuffixPath}` : finalSuffixPath;
+
   const params = { destinationPath: destinationPath(finalSuffixPath) };
 
   if (organization) {
     params.organization = organization;
+  }
+
+  if (tagPrefix) {
+    params.tagPrefix = tagPrefix;
   }
 
   const command = generateFn(params);
@@ -58,4 +64,10 @@ for (const [type] of createTypes) {
 }
 
 // Generates snapshots for wc-ts using an orgaization name
-generateSnapshot('wc-ts', '@izwc-test');
+generateSnapshot('wc-ts', { organization: '@izwc-test' });
+
+// Generates snapshots for wc using a tag prefix
+generateSnapshot('wc', { tagPrefix: 'izwc-test' });
+
+// Generates snapshots for wc-ts using an orgaization name and a tag prefix
+generateSnapshot('wc-ts', { organization: '@izwc-test', tagPrefix: 'izwc-test' });

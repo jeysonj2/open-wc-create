@@ -58,6 +58,13 @@ const optionDefinitions = [
     typeLabel: '{underline true|false}',
   },
   {
+    name: 'tagPrefix',
+    description:
+      'Added as a prefix to the tag name e.g. tagPrefix my-prefix, then the final tagName will be my-prefix-my-element',
+    type: String,
+    typeLabel: '{underline string}',
+  },
+  {
     name: 'tagName',
     description: 'The tag name for the web component or app shell element',
     type: String,
@@ -176,6 +183,23 @@ export const AppMixin = subclass =>
           initial: 1,
         },
         {
+          type: (prev, all) => (all.tagPrefix ? null : 'text'),
+          name: 'tagPrefix',
+          message: (prev, all) =>
+            `What is the tag prefix of your ${
+              all.scaffoldType === 'app' ? 'app shell element' : 'web component'
+            }? (empty for no prefix)`,
+          validate: tagPrefix => {
+            if (tagPrefix === '') {
+              return true;
+            }
+
+            return !/^[a-z][a-z0-9-]*$/.test(tagPrefix)
+              ? 'It has to be a text in lowercase, could include numbers and dashes and must starts with a letter (e.g. the-prefix, my-prefix-1)'
+              : true;
+          },
+        },
+        {
           type: (prev, all) => (all.tagName ? null : 'text'),
           name: 'tagName',
           message: (prev, all) =>
@@ -213,6 +237,12 @@ export const AppMixin = subclass =>
       this.options.organization = '';
       if (overrides.organization) {
         this.options.organization = overrides.organization;
+      }
+
+      // include tagPrefix (if not empty) in options
+      this.options.tagPrefix = '';
+      if (overrides.tagPrefix) {
+        this.options.tagPrefix = overrides.tagPrefix;
       }
 
       if (this.options.type === 'scaffold') {

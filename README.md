@@ -74,6 +74,7 @@ You may pass options to skip the CLI wizard in part or in whole.
 | `--scaffoldType`        | `wc`\|`app`                                 | The type of project to scaffold. wc for a single published component, app for an application                              |     |
 | `--features`            | `linting`\|`testing`\|`demoing`\|`building` | Which features to include. linting, testing, demoing, or building                                                         |     |
 | `--typescript`          | `true`\|`false`                             | Whether to use TypeScript in your project                                                                                 |     |
+| `--tagPrefix`           | string                                      | Added as a prefix to the tag name e.g. tagPrefix my-prefix, then the final tagName will be my-prefix-my-element           |     |
 | `--tagName`             | string                                      | The tag name for the web component or app shell element                                                                   |     |
 | `--installDependencies` | `yarn`\|`npm`\|`false`                      | Whether to install dependencies. Choose npm or yarn to install with those package managers, or false to skip installation |     |
 | `--writeToDisk`         | `true`\|`false`                             | Whether or not to actually write the files to disk                                                                        |     |
@@ -134,5 +135,3 @@ npm init @izwc@latest
   <br/>
 
 For information on how to extend and customize the generator, see the [docs page](https://open-wc.org/docs/development/generator/#extending)
-
-## Commands

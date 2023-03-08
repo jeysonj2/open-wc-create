@@ -3,7 +3,7 @@ import '../src/<%= tagName %>.js';
 
 export default {
   title: '<%= className %>',
-  component: '<%= tagName %>',
+  component: '<%= tagPrefix %><%= tagName %>',
   argTypes: {
     header: { control: 'text' },
     counter: { control: 'number' },
@@ -30,13 +30,13 @@ const Template: Story<ArgTypes> = ({
   textColor,
   slot,
 }: ArgTypes) => html`
-  <<%= tagName %>
+  <<%= tagPrefix %><%= tagName %>
     style="--<%= tagName %>-text-color: ${textColor || 'black'}"
     .header=${header}
     .counter=${counter}
   >
     ${slot}
-  </<%= tagName %>>
+  </<%= tagPrefix %><%= tagName %>>
 `;
 
 export const Regular = Template.bind({});

@@ -3,7 +3,7 @@ import '../src/<%= tagName %>.js';
 
 export default {
   title: '<%= className %>',
-  component: '<%= tagName %>',
+  component: '<%= tagPrefix %><%= tagName %>',
   argTypes: {
     backgroundColor: { control: 'color' },
   },
@@ -11,11 +11,11 @@ export default {
 
 function Template({ title, backgroundColor }) {
   return html`
-    <<%= tagName %>
+    <<%= tagPrefix %><%= tagName %>
       style="--<%= tagName %>-background-color: ${backgroundColor || 'white'}"
       .title=${title}
     >
-    </<%= tagName %>>
+    </<%= tagPrefix %><%= tagName %>>
   `;
 }
 

@@ -3,7 +3,7 @@ import '../src/<%= tagName %>.js';
 
 export default {
   title: '<%= className %>',
-  component: '<%= tagName %>',
+  component: '<%= tagPrefix %><%= tagName %>',
   argTypes: {
     backgroundColor: { control: 'color' },
   },
@@ -21,7 +21,7 @@ interface ArgTypes {
 }
 
 const Template: Story<ArgTypes> = ({ title, backgroundColor = 'white' }: ArgTypes) => html`
-  <<%= tagName %> style="--<%= tagName %>-background-color: ${backgroundColor}" .title=${title}></<%= tagName %>>
+  <<%= tagPrefix %><%= tagName %> style="--<%= tagName %>-background-color: ${backgroundColor}" .title=${title}></<%= tagPrefix %><%= tagName %>>
 `;
 
 export const App = Template.bind({});

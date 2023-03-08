@@ -12,10 +12,10 @@ npm i <%= organization %><%= tagName %>
 
 ```html
 <script type="module">
-  import '<%= organization %><%= tagName %>/<%= tagName %>.js';
+  import '<%= organization %><%= tagName %>';
 </script>
 
-<<%= tagName %>></<%= tagName %>>
+<<%= tagPrefix %><%= tagName %>></<%= tagPrefix %><%= tagName %>>
 ```
 
 <%= featureReadmes %>

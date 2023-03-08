@@ -1,8 +1,8 @@
 {
   "name": "<%= organization %><%= tagName %>",
   "version": "0.0.0",
-  "description": "Webcomponent <%= tagName %> following open-wc recommendations",
-  "author": "<%= tagName %>",
+  "description": "Webcomponent <%= tagPrefix %><%= tagName %> following open-wc recommendations",
+  "author": "<%= organization %><%= tagName %>",
   "license": "MIT",
   "customElements": "custom-elements.json",
   "scripts": {

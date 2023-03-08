@@ -64,7 +64,7 @@ function checkSnapshotContents(expectedPath, actualPath) {
   });
 }
 
-function create(typeOfCreate = 'app', organization = '') {
+function create(typeOfCreate = 'app', { organization = '', tagPrefix = '' } = {}) {
   const createType = createTypes.has(typeOfCreate) ? typeOfCreate : 'app';
 
   let stdout;
@@ -83,6 +83,7 @@ function create(typeOfCreate = 'app', organization = '') {
 
     let suffixPath = createTypes.get(createType)?.suffixPath || 'fully-loaded-app';
     suffixPath = organization ? `${suffixPath}-org` : suffixPath;
+    suffixPath = tagPrefix ? `${tagPrefix}-${suffixPath}` : suffixPath;
 
     const generateCommand =
       createTypes.get(createType)?.generateFn ||
@@ -92,7 +93,7 @@ function create(typeOfCreate = 'app', organization = '') {
 
     const destinationPath = join(OUTPUT_PATH, suffixPath);
     const expectedPath = join(__dirname, `./snapshots/${suffixPath}`);
-    const command = generateCommand({ destinationPath, organization });
+    const command = generateCommand({ destinationPath, organization, tagPrefix });
 
     before(generate({ command, expectedPath, suffixPath }));
 
@@ -150,4 +151,10 @@ for (const [type] of createTypes) {
 }
 
 // Generates snapshots for wc-ts using an orgaization name
-describe(`create wc-ts-org`, create('wc-ts', '@izwc-test'));
+describe(`create wc-ts-org`, create('wc-ts', { organization: '@izwc-test' }));
+
+// Generates snapshots for wc using a tag prefix
+describe(`create wc-prefix`, create('wc', { tagPrefix: 'izwc-test' }));
+
+// Generates snapshots for wc-ts using an orgaization name and a tag prefix
+describe(`create wc-ts-org-prefix`, create('wc-ts', { organization: '@izwc-test', tagPrefix: 'izwc-test' }));

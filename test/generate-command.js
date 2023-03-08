@@ -2,9 +2,27 @@ import { join } from 'path';
 
 const COMMAND_PATH = join(__dirname, '../src/create.js');
 
-export function generateCommand({ destinationPath = '.', organization = '' } = {}) {
-  return `node -r @babel/register ${COMMAND_PATH} \
-      --destinationPath ${destinationPath}${organization ? ` --organization ${organization}` : ''} \
+function getExtraOptions({ destinationPath = '.', organization = '', tagPrefix = '' } = {}) {
+  let extraOptions = '';
+
+  if (destinationPath) {
+    extraOptions = `${extraOptions} \
+      --destinationPath ${destinationPath}`;
+  }
+
+  if (organization) {
+    extraOptions = `${extraOptions} \
+      --organization ${organization}`;
+  }
+
+  extraOptions = `${extraOptions} \
+      --tagPrefix ${tagPrefix || ''}`;
+
+  return extraOptions;
+}
+
+export function generateCommand(extraOptions = {}) {
+  return `node -r @babel/register ${COMMAND_PATH}${getExtraOptions(extraOptions)} \
       --type scaffold \
       --scaffoldType app \
       --features linting testing demoing building \
@@ -16,9 +34,8 @@ export function generateCommand({ destinationPath = '.', organization = '' } = {
   `;
 }
 
-export function generateCommandWc({ destinationPath = '.', organization = '' } = {}) {
-  return `node -r @babel/register ${COMMAND_PATH} \
-      --destinationPath ${destinationPath}${organization ? ` --organization ${organization}` : ''} \
+export function generateCommandWc(extraOptions = {}) {
+  return `node -r @babel/register ${COMMAND_PATH}${getExtraOptions(extraOptions)} \
       --type scaffold \
       --scaffoldType wc \
       --features linting testing demoing \
@@ -30,9 +47,8 @@ export function generateCommandWc({ destinationPath = '.', organization = '' } =
   `;
 }
 
-export function generateCommandWcTs({ destinationPath = '.', organization = '' } = {}) {
-  return `node -r @babel/register ${COMMAND_PATH} \
-      --destinationPath ${destinationPath}${organization ? ` --organization ${organization}` : ''} \
+export function generateCommandWcTs(extraOptions = {}) {
+  return `node -r @babel/register ${COMMAND_PATH}${getExtraOptions(extraOptions)} \
       --type scaffold \
       --scaffoldType wc \
       --features linting testing demoing \

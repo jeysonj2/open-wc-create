@@ -41,6 +41,7 @@ class Generator {
     this.options = {
       destinationPath: 'auto',
       organization: '',
+      tagPrefix: '',
     };
     this.templateData = {};
     this.wantsNpmInstall = true;
@@ -51,7 +52,7 @@ class Generator {
 
   execute() {
     if (this.options.tagName) {
-      const { tagName, organization } = this.options;
+      const { tagName, organization, tagPrefix } = this.options;
       const className = getClassName(tagName);
 
       let org = organization || '';
@@ -60,7 +61,19 @@ class Generator {
         org = `${org}/`;
       }
 
-      this.templateData = { ...this.templateData, tagName, className, organization: org };
+      let tagP = tagPrefix || '';
+      // Adding the - to the end of the tagPrefix
+      if (tagP && !tagP.endsWith('-')) {
+        tagP = `${tagP}-`;
+      }
+
+      this.templateData = {
+        ...this.templateData,
+        tagName,
+        className,
+        organization: org,
+        tagPrefix: tagP,
+      };
 
       if (this.options.destinationPath === 'auto') {
         this.options.destinationPath = process.cwd();

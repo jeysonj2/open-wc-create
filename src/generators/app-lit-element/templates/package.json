@@ -1,5 +1,5 @@
 {
-  "name": "<%= tagName %>",
+  "name": "<%= organization %><%= tagName %>",
   "license": "MIT",
   "type": "module",
   "scripts": {

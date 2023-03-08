@@ -3,7 +3,7 @@ import '../<%= tagName %>.js';
 
 export default {
   title: '<%= className %>',
-  component: '<%= tagName %>',
+  component: '<%= tagPrefix %><%= tagName %>',
   argTypes: {
     header: { control: 'text' },
     counter: { control: 'number' },
@@ -13,13 +13,13 @@ export default {
 
 function Template({ header = 'Hello world', counter = 1, textColor, slot }) {
   return html`
-    <<%= tagName %>
+    <<%= tagPrefix %><%= tagName %>
       style="--<%= tagName %>-text-color: ${textColor || 'black'}"
       .header=${header}
       .counter=${counter}
     >
       ${slot}
-    </<%= tagName %>>
+    </<%= tagPrefix %><%= tagName %>>
   `;
 }
 

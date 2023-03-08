@@ -18,9 +18,9 @@
     const header = '@izwc Hello World!';
     render(
       html`
-        <<%= tagName %> .header=${header}>
+        <<%= tagPrefix %><%= tagName %> .header=${header}>
           some light-dom
-        </<%= tagName %>>
+        </<%= tagPrefix %><%= tagName %>>
       `,
       document.querySelector('#demo')
     );

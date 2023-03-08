@@ -6,7 +6,7 @@ import '../src/<%= tagName %>.js';
 describe('<%= className %>', () => {
   let element;
   beforeEach(async () => {
-    element = await fixture(html`<<%= tagName %>></<%= tagName %>>`);
+    element = await fixture(html`<<%= tagPrefix %><%= tagName %>></<%= tagPrefix %><%= tagName %>>`);
   });
 
   it('renders a h1', () => {

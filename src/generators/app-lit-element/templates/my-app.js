@@ -85,4 +85,4 @@ class <%= className %> extends LitElement {
   }
 }
 
-customElements.define('<%= tagName %>', <%= className %>);
+customElements.define('<%= tagPrefix %><%= tagName %>', <%= className %>);
