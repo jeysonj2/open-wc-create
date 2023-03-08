@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.1](https://github.com/jeysonj2/open-wc-create/compare/v1.2.0...v1.2.1) (2023-03-08)
+
+
+### Bug Fixes
+
+* tagPrefix was being set to empty even when a value was entered ([b1389eb](https://github.com/jeysonj2/open-wc-create/commit/b1389ebbaa3a0aafe51f1406dd9c07480ed31f7a))
+
 ## [1.2.0](https://github.com/jeysonj2/open-wc-create/compare/v1.1.1...v1.2.0) (2023-03-08)
 
 
