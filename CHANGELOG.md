@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/jeysonj2/open-wc-create/compare/v1.1.1...v1.2.0) (2023-03-08)
+
+
+### Features
+
+* Added --tagPrefix option ([79798b2](https://github.com/jeysonj2/open-wc-create/commit/79798b28311dc54f23b3fc3592ff918f950aa9cc))
+
+
+### Bug Fixes
+
+* some issues introduced in previous commits related to the new tagPrefix feature ([f16ded6](https://github.com/jeysonj2/open-wc-create/commit/f16ded66667f5a79ca5f0653050336401ae1c885))
+
 ### [1.1.1](https://github.com/jeysonj2/open-wc-create/compare/v1.1.0...v1.1.1) (2023-02-27)
 
 
