@@ -240,7 +240,6 @@ export const AppMixin = subclass =>
       }
 
       // include tagPrefix (if not empty) in options
-      this.options.tagPrefix = '';
       if (overrides.tagPrefix) {
         this.options.tagPrefix = overrides.tagPrefix;
       }
