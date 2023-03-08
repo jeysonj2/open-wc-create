@@ -157,4 +157,7 @@ describe(`create wc-ts-org`, create('wc-ts', { organization: '@izwc-test' }));
 describe(`create wc-prefix`, create('wc', { tagPrefix: 'izwc-test' }));
 
 // Generates snapshots for wc-ts using an orgaization name and a tag prefix
-describe(`create wc-ts-org-prefix`, create('wc-ts', { organization: '@izwc-test', tagPrefix: 'izwc-test' }));
+describe(
+  `create wc-ts-org-prefix`,
+  create('wc-ts', { organization: '@izwc-test', tagPrefix: 'izwc-test' }),
+);
