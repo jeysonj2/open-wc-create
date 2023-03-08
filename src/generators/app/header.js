@@ -1,7 +1,7 @@
 import chalk from 'chalk';
 
 const at = chalk.green('@izwc');
-const fromHamburgWithLove = chalk.red('From Hamburg with love ❤️⚓');
+const fromHamburgWithLove = chalk.red('From Hamburg with love  ❤️  ⚓');
 
 export default `
 ░░░░░░░░░░▄███████▄░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
@@ -23,7 +23,7 @@ export default `
 ░░░░░░▀███████▄███████▀░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 ░░░░░░░░░▀████▄████▀░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 ░░░░░░░░░░░░▀█▄█▀░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-░░░░░░░░░░░░░░▀░░░░░░░░░░░${fromHamburgWithLove}
+░░░░░░░░░░░░░░▀░░░░░░░░░░░░░░${fromHamburgWithLove}
 
 ${chalk.underline('IZWC - Open Web Components Recommendations')}
 
