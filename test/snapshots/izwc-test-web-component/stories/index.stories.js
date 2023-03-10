@@ -3,7 +3,7 @@ import '../scaffold-wc.js';
 
 export default {
   title: 'ScaffoldWc',
-  component: 'izwc-test-scaffold-wc',
+  component: 'interzero-test-scaffold-wc',
   argTypes: {
     header: { control: 'text' },
     counter: { control: 'number' },
@@ -13,13 +13,13 @@ export default {
 
 function Template({ header = 'Hello world', counter = 1, textColor, slot }) {
   return html`
-    <izwc-test-scaffold-wc
+    <interzero-test-scaffold-wc
       style="--scaffold-wc-text-color: ${textColor || 'black'}"
       .header=${header}
       .counter=${counter}
     >
       ${slot}
-    </izwc-test-scaffold-wc>
+    </interzero-test-scaffold-wc>
   `;
 }
 

@@ -10,7 +10,7 @@
 ░░░░░░░░░░░░▐█▄█▌░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 ░░░░░░░░░░░░▐█▄█▌░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 ░░▄█▄░░░░░░░▐█▄█▌░░░░░░░▄█▄░░░░░░░░CODE░GENERATOR░░░░░░░░░░
-▄█████▄░░░░░▐█▄█▌░░░░░▄█████▄░░░░░░░░░░@izwc░░░░░░░░░░░░░░░
+▄█████▄░░░░░▐█▄█▌░░░░░▄█████▄░░░░░░░░░░@interzero░░░░░░░░░░░░░░░
 ░░███░░░░░░░▐█▄█▌░░░░░░░███░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 ░░███▄░░░░░▄██▄██▄░░░░░▄███░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 ░░▀████▄▄▄████▄████▄▄▄████▀░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
@@ -20,7 +20,7 @@
 ░░░░░░░░░░░░▀█▄█▀░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 ░░░░░░░░░░░░░░▀░░░░░░░░░░░░░░From Hamburg with love  ❤️  ⚓
 
-IZWC - Open Web Components Recommendations
+interzero - Open Web Components Recommendations
 
 Start or upgrade your web component project with ease.
 All our recommendations at your fingertips.
@@ -35,7 +35,7 @@ Note: you can exit any time with Ctrl+C or Esc
 ./
 ├── test/
 │   ├── output/
-│   │   ├── izwc-test-web-component-ts-org/
+│   │   ├── interzero-test-web-component-ts-org/
 │   │   │   ├── .storybook/
 │   │   │   │   ├── main.js
 │   │   │   │   ├── package.json
@@ -64,11 +64,11 @@ Note: you can exit any time with Ctrl+C or Esc
 Writing..... done
 
 If you want to rerun this exact same generator you can do so by executing:
-npm init @izwc@latest --destinationPath /path/to/izwc/create/test/output/izwc-test-web-component-ts-org --organization @izwc-test --tagPrefix izwc-test --type scaffold --scaffoldType wc --features linting testing demoing --typescript true --tagName scaffold-wc --writeToDisk true --installDependencies false 
+npm init @interzero@latest --destinationPath /path/to/interzero/create/test/output/interzero-test-web-component-ts-org --organization @interzero-test --tagPrefix interzero-test --type scaffold --scaffoldType wc --features linting testing demoing --typescript true --tagName scaffold-wc --writeToDisk true --installDependencies false 
 
 You are all set up now!
 
 All you need to do is run:
-  cd /path/to/izwc/create/test/output/izwc-test-web-component-ts-org
+  cd /path/to/interzero/create/test/output/interzero-test-web-component-ts-org
   npm run start
 

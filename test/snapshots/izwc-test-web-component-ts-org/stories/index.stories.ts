@@ -3,7 +3,7 @@ import '../src/scaffold-wc.js';
 
 export default {
   title: 'ScaffoldWc',
-  component: 'izwc-test-scaffold-wc',
+  component: 'interzero-test-scaffold-wc',
   argTypes: {
     header: { control: 'text' },
     counter: { control: 'number' },
@@ -30,13 +30,13 @@ const Template: Story<ArgTypes> = ({
   textColor,
   slot,
 }: ArgTypes) => html`
-  <izwc-test-scaffold-wc
+  <interzero-test-scaffold-wc
     style="--scaffold-wc-text-color: ${textColor || 'black'}"
     .header=${header}
     .counter=${counter}
   >
     ${slot}
-  </izwc-test-scaffold-wc>
+  </interzero-test-scaffold-wc>
 `;
 
 export const Regular = Template.bind({});

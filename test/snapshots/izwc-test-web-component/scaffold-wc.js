@@ -7,6 +7,6 @@ if (!cElements) {
   throw new Error('Custom Elements not supported');
 }
 
-if (!cElements.get('izwc-test-scaffold-wc')) {
-  cElements.define('izwc-test-scaffold-wc', ScaffoldWc);
+if (!cElements.get('interzero-test-scaffold-wc')) {
+  cElements.define('interzero-test-scaffold-wc', ScaffoldWc);
 }

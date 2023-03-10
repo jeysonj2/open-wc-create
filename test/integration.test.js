@@ -151,13 +151,13 @@ for (const [type] of createTypes) {
 }
 
 // Generates snapshots for wc-ts using an orgaization name
-describe(`create wc-ts-org`, create('wc-ts', { organization: '@izwc-test' }));
+describe(`create wc-ts-org`, create('wc-ts', { organization: '@interzero-test' }));
 
 // Generates snapshots for wc using a tag prefix
-describe(`create wc-prefix`, create('wc', { tagPrefix: 'izwc-test' }));
+describe(`create wc-prefix`, create('wc', { tagPrefix: 'interzero-test' }));
 
 // Generates snapshots for wc-ts using an orgaization name and a tag prefix
 describe(
   `create wc-ts-org-prefix`,
-  create('wc-ts', { organization: '@izwc-test', tagPrefix: 'izwc-test' }),
+  create('wc-ts', { organization: '@interzero-test', tagPrefix: 'interzero-test' }),
 );

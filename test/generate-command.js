@@ -94,12 +94,12 @@ export function stripUserDir(output, suffix = 'fully-loaded-app') {
 
   // destinationPath
   let toStrip = new RegExp(`destinationPath.*${suffix}`, 'gm');
-  let toKeep = `destinationPath /path/to/izwc/create/test/output/${suffix}`;
+  let toKeep = `destinationPath /path/to/interzero/create/test/output/${suffix}`;
   result = result.replace(toStrip, toKeep);
 
   // cd
   toStrip = new RegExp(`cd.*${suffix}`, 'gm');
-  toKeep = `cd /path/to/izwc/create/test/output/${suffix}`;
+  toKeep = `cd /path/to/interzero/create/test/output/${suffix}`;
   result = result.replace(toStrip, toKeep);
 
   return result;

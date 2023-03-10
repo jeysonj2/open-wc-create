@@ -11,7 +11,7 @@
 To get started:
 
 ```sh
-npm init @izwc
+npm init @interzero
 # requires node 10 & npm 6 or higher
 ```
 

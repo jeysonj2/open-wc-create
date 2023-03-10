@@ -1,6 +1,6 @@
 import chalk from 'chalk';
 
-const at = chalk.green('@izwc');
+const at = chalk.green('@interzero');
 const fromHamburgWithLove = chalk.red('From Hamburg with love  ❤️  ⚓');
 
 export default `
@@ -25,7 +25,7 @@ export default `
 ░░░░░░░░░░░░▀█▄█▀░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 ░░░░░░░░░░░░░░▀░░░░░░░░░░░░░░${fromHamburgWithLove}
 
-${chalk.underline('IZWC - Open Web Components Recommendations')}
+${chalk.underline('interzero - Open Web Components Recommendations')}
 
 Start or upgrade your web component project with ease.
 All our recommendations at your fingertips.

@@ -1,5 +1,5 @@
 {
-  "name": "@izwc/create",
+  "name": "@interzero/create",
   "version": "1.2.2",
   "publishConfig": {
     "access": "public"
@@ -13,7 +13,7 @@
   "bugs": {
     "url": "https://github.com/jeysonj2/open-wc-create/issues"
   },
-  "author": "open-wc & izwc",
+  "author": "open-wc & interzero",
   "homepage": "https://github.com/jeysonj2/open-wc-create",
   "bin": {
     "create-open-wc": "./dist/create.js"
@@ -38,7 +38,7 @@
   ],
   "keywords": [
     "open-wc",
-    "izwc",
+    "interzero",
     "owc",
     "generator",
     "starter-app"

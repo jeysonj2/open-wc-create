@@ -1,8 +1,8 @@
 {
-  "name": "@izwc-test/scaffold-wc",
-  "description": "Webcomponent izwc-test-scaffold-wc following open-wc recommendations",
+  "name": "@interzero-test/scaffold-wc",
+  "description": "Webcomponent interzero-test-scaffold-wc following open-wc recommendations",
   "license": "MIT",
-  "author": "@izwc-test/scaffold-wc",
+  "author": "@interzero-test/scaffold-wc",
   "version": "0.0.0",
   "type": "module",
   "main": "dist/src/index.js",

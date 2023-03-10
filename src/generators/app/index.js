@@ -13,8 +13,8 @@ import { gatherMixins } from './gatherMixins.js';
  * Allows to control the data via command line
  *
  * example:
- * npm init @izwc --type scaffold --scaffoldType app --tagName foo-bar --installDependencies false
- * npm init @izwc --type upgrade --features linting demoing --tagName foo-bar --installDependencies false
+ * npm init @interzero --type scaffold --scaffoldType app --tagName foo-bar --installDependencies false
+ * npm init @interzero --type upgrade --features linting demoing --tagName foo-bar --installDependencies false
  */
 const optionDefinitions = [
   {
@@ -106,7 +106,7 @@ if (overrides.help) {
     },
     {
       header: 'Usage',
-      content: '$ npm init @izwc [<options>]',
+      content: '$ npm init @interzero [<options>]',
     },
     {
       header: 'Options',

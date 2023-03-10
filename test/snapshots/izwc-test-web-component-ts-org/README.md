@@ -1,21 +1,21 @@
-# \<@izwc-test/scaffold-wc>
+# \<@interzero-test/scaffold-wc>
 
 This webcomponent follows the [open-wc](https://github.com/open-wc/open-wc) recommendation.
 
 ## Installation
 
 ```bash
-npm i @izwc-test/scaffold-wc
+npm i @interzero-test/scaffold-wc
 ```
 
 ## Usage
 
 ```html
 <script type="module">
-  import '@izwc-test/scaffold-wc';
+  import '@interzero-test/scaffold-wc';
 </script>
 
-<izwc-test-scaffold-wc></izwc-test-scaffold-wc>
+<interzero-test-scaffold-wc></interzero-test-scaffold-wc>
 ```
 
 ## Linting and formatting

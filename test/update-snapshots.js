@@ -14,9 +14,9 @@ execSync(`rm -rf ${snapshotPath}/*`);
  * @return {string}
  * @example
  * destinationPath('fully-loaded-app')
- * // => '/path/to/izwc/create/test/snapshots/fully-loaded-app'
+ * // => '/path/to/interzero/create/test/snapshots/fully-loaded-app'
  * destinationPath('web-component')
- * // => '/path/to/izwc/create/test/snapshots/web-component'
+ * // => '/path/to/interzero/create/test/snapshots/web-component'
  */
 function destinationPath(suffix) {
   return join(snapshotPath, `./${suffix}`);
@@ -28,9 +28,9 @@ function destinationPath(suffix) {
  * @param  {string} suffix
  * @example
  * writeCommandOutputToFile('some output', 'fully-loaded-app')
- * // => writes 'some output' to '/path/to/izwc/create/test/snapshots/fully-loaded-app.output.txt'
+ * // => writes 'some output' to '/path/to/interzero/create/test/snapshots/fully-loaded-app.output.txt'
  * writeCommandOutputToFile('some output', 'web-component')
- * // => writes 'some output' to '/path/to/izwc/create/test/snapshots/web-component.output.txt'
+ * // => writes 'some output' to '/path/to/interzero/create/test/snapshots/web-component.output.txt'
  */
 function writeCommandOutputToFile(output, suffix) {
   const snapshotOutputPath = join(snapshotPath, `./${suffix}.output.txt`);
@@ -64,10 +64,10 @@ for (const [type] of createTypes) {
 }
 
 // Generates snapshots for wc-ts using an orgaization name
-generateSnapshot('wc-ts', { organization: '@izwc-test' });
+generateSnapshot('wc-ts', { organization: '@interzero-test' });
 
 // Generates snapshots for wc using a tag prefix
-generateSnapshot('wc', { tagPrefix: 'izwc-test' });
+generateSnapshot('wc', { tagPrefix: 'interzero-test' });
 
 // Generates snapshots for wc-ts using an orgaization name and a tag prefix
-generateSnapshot('wc-ts', { organization: '@izwc-test', tagPrefix: 'izwc-test' });
+generateSnapshot('wc-ts', { organization: '@interzero-test', tagPrefix: 'interzero-test' });

@@ -15,14 +15,14 @@ Web component project scaffolding.
 ## Usage
 
 ```bash
-npm init @izwc@latest
+npm init @interzero@latest
 ```
 
 <div class="custom-block warning"><p class="custom-block-title">WARNING</p> <p><code>npm init</code> requires node 14 &amp; npm 6 or higher</p></div>
 
 This will kickstart a menu guiding you through all available actions.
 
-    $ npm init @izwc@latest
+    $ npm init @interzero@latest
 
     ░░░░░░░░░░▄███████▄░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
     ░░░░░░░░░▐██▀░░░▀██▌░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
@@ -35,7 +35,7 @@ This will kickstart a menu guiding you through all available actions.
     ░░░░░░░░░░░░▐█▄█▌░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
     ░░░░░░░░░░░░▐█▄█▌░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
     ░░▄█▄░░░░░░░▐█▄█▌░░░░░░░▄█▄░░░░░░░░CODE░GENERATOR░░░░░░░░░░
-    ▄█████▄░░░░░▐█▄█▌░░░░░▄█████▄░░░░░░░░░░@izwc░░░░░░░░░░░░░░░
+    ▄█████▄░░░░░▐█▄█▌░░░░░▄█████▄░░░░░░░░░░@interzero░░░░░░░░░░░░░░░
     ░░███░░░░░░░▐█▄█▌░░░░░░░███░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
     ░░███▄░░░░░▄██▄██▄░░░░░▄███░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
     ░░▀████▄▄▄████▄████▄▄▄████▀░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
@@ -45,7 +45,7 @@ This will kickstart a menu guiding you through all available actions.
     ░░░░░░░░░░░░▀█▄█▀░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
     ░░░░░░░░░░░░░░▀░░░░░░░░░░░From Hamburg with love ❤️⚓
 
-    IZWC - Open Web Components Recommendations
+    interzero - Open Web Components Recommendations
 
     Start or upgrade your web component project with ease.
     All our recommendations at your fingertips.
@@ -89,7 +89,7 @@ They will create a new folder and set up everything you need to get started imme
 Example usage:
 
 ```bash
-npm init @izwc@latest
+npm init @interzero@latest
 # Select "Scaffold a new project"
 ```
 
@@ -112,7 +112,7 @@ Example usage:
 
 ```bash
 cd existing-web-component
-npm init @izwc@latest
+npm init @interzero@latest
 # select "Upgrade an existing project" or add features while scaffolding
 ```
 

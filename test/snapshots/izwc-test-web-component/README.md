@@ -15,7 +15,7 @@ npm i scaffold-wc
   import 'scaffold-wc';
 </script>
 
-<izwc-test-scaffold-wc></izwc-test-scaffold-wc>
+<interzero-test-scaffold-wc></interzero-test-scaffold-wc>
 ```
 
 ## Linting and formatting

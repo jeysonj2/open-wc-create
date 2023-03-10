@@ -55,7 +55,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Features
 
-* npm init [@izwc](https://github.com/izwc)@latest ([c43048c](https://github.com/jeysonj2/open-wc-create/commit/c43048ce026822b39494a605a17c993a114e112e))
+* npm init [@interzero](https://github.com/interzero)@latest ([c43048c](https://github.com/jeysonj2/open-wc-create/commit/c43048ce026822b39494a605a17c993a114e112e))
 
 ## [0.1.0](https://github.com/jeysonj2/open-wc-create/compare/v0.1.1...v0.1.0) (2023-02-25)
 

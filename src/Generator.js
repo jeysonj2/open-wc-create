@@ -47,7 +47,7 @@ class Generator {
     this.wantsNpmInstall = true;
     this.wantsWriteToDisk = true;
     this.wantsRecreateInfo = true;
-    this.generatorName = '@izwc';
+    this.generatorName = '@interzero';
   }
 
   execute() {
