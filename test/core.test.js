@@ -285,7 +285,9 @@ describe('optionsToCommand', () => {
     const options = {
       features: ['testing', 'demoing'],
     };
-    expect(optionsToCommand(options)).to.equal('npm init @interzero@latest --features testing demoing ');
+    expect(optionsToCommand(options)).to.equal(
+      'npm init @interzero@latest --features testing demoing ',
+    );
   });
 
   it('converts real example', async () => {
