@@ -22,6 +22,7 @@ npm init @interzero@latest
 
 This will kickstart a menu guiding you through all available actions.
 
+```bash
 $ npm init @interzero@latest
 
 ░░░░░░░░░░▄███████▄░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
@@ -58,6 +59,7 @@ Note: you can exit any time with Ctrl+C or Esc
 ? What would you like to do today? › - Use arrow-keys. Return to submit.
 ❯ Scaffold a new project
 Upgrade an existing project
+```
 
 Our generators are very modular you can pick and choose as you see fit.
 
