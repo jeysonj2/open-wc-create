@@ -43,7 +43,7 @@ $ npm init @interzero@latest
 ░░░░░░▀███████▄███████▀░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 ░░░░░░░░░▀████▄████▀░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 ░░░░░░░░░░░░▀█▄█▀░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-░░░░░░░░░░░░░░▀░░░░░░░░░░░░░░From Hamburg with love  ❤️  ⚓
+░░░░░░░░░░░░░░▀░░░░░░░░░░░░░░From Hamburg with love ❤️ ⚓
 
 interzero - Open Web Components Recommendations
 
@@ -54,11 +54,10 @@ Based on the Open Web Components recommendations.
 open-wc.org / @openWc
 See more details at https://open-wc.org/init/
 
-
 Note: you can exit any time with Ctrl+C or Esc
 ? What would you like to do today? › - Use arrow-keys. Return to submit.
-❯   Scaffold a new project
-    Upgrade an existing project
+❯ Scaffold a new project
+Upgrade an existing project
 
 Our generators are very modular you can pick and choose as you see fit.
 
