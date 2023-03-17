@@ -14,6 +14,7 @@
     "sourceMap": true,
     "inlineSources": true,
     "rootDir": "./",
+    "allowJs": true,
     "declaration": true,
     "incremental": true
   },
