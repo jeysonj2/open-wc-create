@@ -1,1 +1,1 @@
-export { ScaffoldWc } from './ScaffoldWc.js';
+export * from './ScaffoldWcExports.js';

@@ -43,7 +43,10 @@ export const WcLitElementMixin = subclass =>
       this.copyTemplate(`${__dirname}/templates/my-el.js`, this.destinationPath(`${tagName}.js`));
 
       // style.css.js template
-      this.copyTemplate(`${__dirname}/templates/style.css.js`, this.destinationPath('src/style.css.js'));
+      this.copyTemplate(
+        `${__dirname}/templates/style.css.js`,
+        this.destinationPath('src/style.css.js'),
+      );
 
       await this.copyTemplates(`${__dirname}/templates/static/**/*`);
     }

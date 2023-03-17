@@ -1,4 +1,4 @@
-import { ScaffoldWc } from './ScaffoldWc.js';
+import { ScaffoldWc } from './ScaffoldWcExports.js';
 
 // Register the element with the browser
 const cElements = customElements ?? window?.customElements;

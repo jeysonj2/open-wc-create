@@ -85,4 +85,13 @@ class ScaffoldApp extends LitElement {
   }
 }
 
-customElements.define('scaffold-app', ScaffoldApp);
+// Register the element with the browser
+const cElements = customElements ?? window?.customElements;
+
+if (!cElements) {
+  throw new Error('Custom Elements not supported');
+}
+
+if (!cElements.get('scaffold-app')) {
+  cElements.define('scaffold-app', ScaffoldApp);
+}

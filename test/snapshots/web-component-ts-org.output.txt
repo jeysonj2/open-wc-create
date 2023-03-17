@@ -43,11 +43,14 @@ Note: you can exit any time with Ctrl+C or Esc
 │   │   │   ├── .vscode/
 │   │   │   │   └── extensions.json
 │   │   │   ├── demo/
-│   │   │   │   └── index.html
+│   │   │   │   ├── index.css
+│   │   │   │   ├── index.html
+│   │   │   │   └── index.js
 │   │   │   ├── src/
 │   │   │   │   ├── index.ts
 │   │   │   │   ├── scaffold-wc.ts
-│   │   │   │   └── ScaffoldWc.ts
+│   │   │   │   ├── ScaffoldWcExports.ts
+│   │   │   │   └── style.css.ts
 │   │   │   ├── stories/
 │   │   │   │   └── index.stories.ts
 │   │   │   ├── test/

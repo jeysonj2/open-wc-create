@@ -8,8 +8,8 @@
   "main": "dist/src/index.js",
   "module": "dist/src/index.js",
   "exports": {
-    "./ScaffoldWc.js": "./dist/src/index.js",
-    ".": "./dist/src/scaffold-wc.js"
+    ".": "./dist/src/index.js",
+    "./wc": "./dist/src/scaffold-wc.js"
   },
   "scripts": {
     "analyze": "cem analyze --litelement",
@@ -66,6 +66,10 @@
         {
           "ignorePackages": true
         }
+      ],
+      "no-shadow": "off",
+      "@typescript-eslint/no-shadow": [
+        "error"
       ]
     }
   },

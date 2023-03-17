@@ -1,4 +1,4 @@
-# \<@interzero-test/scaffold-wc>
+# @interzero-test/scaffold-wc
 
 This webcomponent follows the [open-wc](https://github.com/open-wc/open-wc) recommendation.
 
@@ -12,7 +12,7 @@ npm i @interzero-test/scaffold-wc
 
 ```html
 <script type="module">
-  import '@interzero-test/scaffold-wc';
+  import '@interzero-test/scaffold-wc/wc';
 </script>
 
 <scaffold-wc></scaffold-wc>

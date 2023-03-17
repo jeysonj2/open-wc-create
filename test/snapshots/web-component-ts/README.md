@@ -1,4 +1,4 @@
-# \<scaffold-wc>
+# scaffold-wc
 
 This webcomponent follows the [open-wc](https://github.com/open-wc/open-wc) recommendation.
 
@@ -12,7 +12,7 @@ npm i scaffold-wc
 
 ```html
 <script type="module">
-  import 'scaffold-wc';
+  import 'scaffold-wc/wc';
 </script>
 
 <scaffold-wc></scaffold-wc>

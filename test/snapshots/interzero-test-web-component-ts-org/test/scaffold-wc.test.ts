@@ -1,6 +1,6 @@
 import { html } from 'lit';
 import { fixture, expect } from '@open-wc/testing';
-import { ScaffoldWc } from '../src/ScaffoldWc.js';
+import { ScaffoldWc } from '../src/ScaffoldWcExports.js';
 import '../src/scaffold-wc.js';
 
 describe('ScaffoldWc', () => {

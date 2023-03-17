@@ -43,9 +43,12 @@ Note: you can exit any time with Ctrl+C or Esc
 │   │   │   ├── .vscode/
 │   │   │   │   └── extensions.json
 │   │   │   ├── demo/
-│   │   │   │   └── index.html
+│   │   │   │   ├── index.css
+│   │   │   │   ├── index.html
+│   │   │   │   └── index.js
 │   │   │   ├── src/
-│   │   │   │   └── ScaffoldWc.js
+│   │   │   │   ├── ScaffoldWcExports.js
+│   │   │   │   └── style.css.js
 │   │   │   ├── stories/
 │   │   │   │   └── index.stories.js
 │   │   │   ├── test/
