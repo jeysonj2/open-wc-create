@@ -31,7 +31,8 @@
     "test:node": "mocha --require @babel/register",
     "test:update-snapshots": "node -r @babel/register ./test/update-snapshots.js",
     "test:watch": "onchange 'src/**/*.js' 'test/**/*.js' -- npm run test --silent",
-    "release:prepare": "npm run format && npm run lint && npm run test:update-snapshots && npm run test && npm run build"
+    "release:prepare": "npm run format && npm run lint && npm run test:update-snapshots && npm run test && npm run build",
+    "publish": "npm run release:prepare && npm run release"
   },
   "files": [
     "dist"
