@@ -1,6 +1,6 @@
 {
   "name": "@interzero-test/scaffold-wc",
-  "description": "Webcomponent scaffold-wc following open-wc recommendations",
+  "description": "Webcomponent @interzero-test/scaffold-wc following open-wc recommendations. HTML Tag: scaffold-wc",
   "license": "MIT",
   "author": "@interzero-test/scaffold-wc",
   "version": "0.0.0",
