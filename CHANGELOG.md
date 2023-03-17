@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/jeysonj2/open-wc-create/compare/v1.2.8...v1.3.0) (2023-03-17)
+
+
+### Features
+
+* allowing tag name without dash ([1828f7f](https://github.com/jeysonj2/open-wc-create/commit/1828f7f3ee69bbfca78579944342adecedb7c38a))
+
 ### [1.2.8](https://github.com/jeysonj2/open-wc-create/compare/v1.2.7...v1.2.8) (2023-03-17)
 
 ### [1.2.7](https://github.com/jeysonj2/open-wc-create/compare/v1.2.6...v1.2.7) (2023-03-17)
