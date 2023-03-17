@@ -207,8 +207,10 @@ export const AppMixin = subclass =>
               all.scaffoldType === 'app' ? 'app shell element' : 'web component'
             }?`,
           validate: tagName =>
-            !/^([a-z])(?!.*[<>])(?=.*-).+$/.test(tagName)
-              ? 'You need a minimum of two lowercase words separated by dashes (e.g. foo-bar)'
+            // !/^([a-z])(?!.*[<>])(?=.*-).+$/.test(tagName)
+            // ? 'You need a minimum of two lowercase words separated by dashes (e.g. foo-bar)'
+            !/^[a-z][a-z0-9-]*$/.test(tagName)
+              ? 'It has to be a text in lowercase, could include numbers and dashes and must starts with a letter (e.g. tag, my-tag, my-tag1)'
               : true,
         },
       ];
