@@ -2,7 +2,7 @@ import { html, LitElement } from 'lit';
 import { property } from 'lit/decorators.js';
 
 // style import
-import { style } from './style.css.js';
+import { style } from './style.css';
 
 export class <%= className %> extends LitElement {
   static styles = style;
