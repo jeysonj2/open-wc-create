@@ -1,13 +1,10 @@
-import { html, css, LitElement } from 'lit';
+import { html, LitElement } from 'lit';
+
+// style import
+import { style } from './style.css.js';
 
 export class <%= className %> extends LitElement {
-  static styles = css`
-    :host {
-      display: block;
-      padding: 25px;
-      color: var(--<%= tagName %>-text-color, #000);
-    }
-  `;
+  static styles = style;
 
   static properties = {
     header: { type: String },

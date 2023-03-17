@@ -1,1 +1,1 @@
-export { <%= className %> } from './src/<%= className %>.js';
+export * from './src/<%= className %>Exports.js';

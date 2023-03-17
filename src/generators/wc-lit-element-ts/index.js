@@ -36,13 +36,19 @@ export const TsWcLitElementMixin = subclass =>
       // write & rename el class template
       this.copyTemplate(
         `${__dirname}/templates/MyEl.ts`,
-        this.destinationPath(`src/${className}.ts`),
+        this.destinationPath(`src/${className}Exports.ts`),
       );
 
       // write & rename el registration template
       this.copyTemplate(
         `${__dirname}/templates/my-el.ts`,
         this.destinationPath(`src/${tagName}.ts`),
+      );
+
+      // style.css.js template
+      this.copyTemplate(
+        `${__dirname}/templates/style.css.ts`,
+        this.destinationPath('src/style.css.ts'),
       );
 
       await this.copyTemplates(`${__dirname}/templates/static/**/*`);

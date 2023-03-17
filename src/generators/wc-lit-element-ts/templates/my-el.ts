@@ -1,4 +1,4 @@
-import { <%= className %> } from './<%= className %>.js';
+import { <%= className %> } from './<%= className %>Exports.js';
 
 // Register the element with the browser
 const cElements = customElements ?? window?.customElements;

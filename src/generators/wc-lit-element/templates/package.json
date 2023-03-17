@@ -6,8 +6,8 @@
     "start": "web-dev-server"
   },
   "exports": {
-    "./<%= className %>.js": "./index.js",
-    ".": "./<%= tagName %>.js"
+    ".": "./index.js",
+    "./wc": "./<%= tagName %>.js"
   },
   "dependencies": {
     "lit": "^2.0.2"

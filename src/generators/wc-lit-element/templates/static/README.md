@@ -1,4 +1,4 @@
-# \<<%= organization %><%= tagName %>>
+# <%= organization %><%= tagName %>
 
 This webcomponent follows the [open-wc](https://github.com/open-wc/open-wc) recommendation.
 
@@ -12,7 +12,7 @@ npm i <%= organization %><%= tagName %>
 
 ```html
 <script type="module">
-  import '<%= organization %><%= tagName %>';
+  import '<%= organization %><%= tagName %>/wc';
 </script>
 
 <<%= tagPrefix %><%= tagName %>></<%= tagPrefix %><%= tagName %>>

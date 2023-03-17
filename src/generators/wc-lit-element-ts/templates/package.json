@@ -3,8 +3,8 @@
   "module": "dist/src/index.js",
   "type": "module",
   "exports": {
-    "./<%= className %>.js": "./dist/src/index.js",
-    ".": "./dist/src/<%= tagName %>.js"
+    ".": "./dist/src/index.js",
+    "./wc": "./dist/src/<%= tagName %>.js"
   },
   "scripts": {
     "start": "tsc && concurrently -k -r \"tsc --watch --preserveWatchOutput\" \"wds\"",
