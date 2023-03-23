@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.7](https://github.com/jeysonj2/open-wc-create/compare/v1.3.6...v1.3.7) (2023-03-23)
+
+
+### Bug Fixes
+
+* style.css import in wc-ts template ([1cc913e](https://github.com/jeysonj2/open-wc-create/commit/1cc913e4c0dd6797ce202b1e8c80f4bb76a48d96))
+
 ### [1.3.6](https://github.com/jeysonj2/open-wc-create/compare/v1.3.5...v1.3.6) (2023-03-21)
 
 ### [1.3.5](https://github.com/jeysonj2/open-wc-create/compare/v1.3.4...v1.3.5) (2023-03-21)
