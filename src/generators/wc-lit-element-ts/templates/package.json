@@ -9,6 +9,7 @@
   "scripts": {
     "start": "tsc && concurrently -k -r \"tsc --watch --preserveWatchOutput\" \"wds\"",
     "build": "rm -rf ./dist && tsc && <%= scriptRunCommand %> analyze -- --exclude dist",
+    "build:watch": "rm -rf ./dist && tsc --watch",
     "prepublish": "rm -rf ./dist && tsc && <%= scriptRunCommand %> analyze -- --exclude dist"
   },
   "dependencies": {
