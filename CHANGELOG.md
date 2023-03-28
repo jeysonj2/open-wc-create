@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/jeysonj2/open-wc-create/compare/v1.3.7...v1.4.0) (2023-03-28)
+
+
+### Features
+
+* added build:watch command on wc ts template ([742b76e](https://github.com/jeysonj2/open-wc-create/commit/742b76e2d685f2e8f0a808af99c3fd9c002b5374))
+
 ### [1.3.7](https://github.com/jeysonj2/open-wc-create/compare/v1.3.6...v1.3.7) (2023-03-23)
 
 
