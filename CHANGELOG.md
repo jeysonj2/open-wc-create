@@ -189,6 +189,11 @@ All notable changes to this project will be documented in this file. See [standa
 * **ts:** add incremental compilation to tsconfig.json ([c4e2010](https://github.com/jeysonj2/open-wc-create/commit/c4e2010d79db299be8b0d413257cba7a31c7ad06))
 * use `--litelement` switch with cem/a ([e7f138c](https://github.com/jeysonj2/open-wc-create/commit/e7f138ccd4f18fd731b980dce7820b56fee69276))
 
+
+# From open-wc/create repository
+
+### [0.38.70](https://github.com/open-wc/create/compare/v0.38.69...v0.38.70) (2023-03-15)
+
 ### [0.38.69](https://github.com/open-wc/create/compare/v0.38.68...v0.38.69) (2023-02-06)
 
 ### [0.38.68](https://github.com/open-wc/create/compare/v0.38.67...v0.38.68) (2023-01-22)
